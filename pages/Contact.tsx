@@ -75,7 +75,6 @@ const Contact: React.FC = () => {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          action="/contact?success=true"
           className="p-8 md:p-10 rounded-[2rem] bg-[#0d0d0f] md:bg-neutral-900/40 border border-white/5 md:backdrop-blur-xl shadow-2xl space-y-4"
         >
           <input type="hidden" name="form-name" value="contact" />
