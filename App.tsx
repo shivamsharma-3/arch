@@ -16,7 +16,6 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
   const [fade, setFade] = useState(false);
   const [progress, setProgress] = useState(0);
   const [currentLog, setCurrentLog] = useState('');
-  const [isMobile, setIsMobile] = useState(false);
   
   const logs = [
     'PARSING_BLUEPRINT_V4...',
@@ -27,8 +26,6 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
   ];
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
-    
     let frameId: number;
     let startTimestamp: number | null = null;
     const duration = window.innerWidth < 768 ? 1600 : 2400;
@@ -50,7 +47,7 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
 
     const logInterval = setInterval(() => {
       setCurrentLog(logs[Math.floor(Math.random() * logs.length)]);
-    }, isMobile ? 800 : 500);
+    }, 500);
 
     const timer = setTimeout(() => {
       setFade(true);
@@ -65,22 +62,22 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
       clearTimeout(finishTimer);
       clearInterval(logInterval);
     };
-  }, [onComplete, isMobile]);
+  }, [onComplete]);
 
   const brand = "ARCH".split("");
 
   return (
-    <div className={`fixed inset-0 z-[100] flex items-center justify-center bg-[#050506] transition-all duration-[1200ms] cubic-bezier(0.23, 1, 0.32, 1) ${fade ? `opacity-0 scale-105 ${isMobile ? '' : 'blur-3xl'} pointer-events-none` : 'opacity-100 scale-100'}`}>
+    <div className={`fixed inset-0 z-[100] flex items-center justify-center bg-[#050506] transition-all duration-[1200ms] cubic-bezier(0.23, 1, 0.32, 1) ${fade ? 'opacity-0 scale-105 blur-3xl pointer-events-none' : 'opacity-100 scale-100'}`}>
       
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
            style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
-      {!isMobile && <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:120px:120px] animate-[pulse_10s_ease-in-out_infinite]" />}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:120px:120px] animate-[pulse_10s_ease-in-out_infinite]" />
 
       <div className="flex flex-col items-center gap-14 w-full max-w-lg px-8 relative">
         <div className="relative w-32 h-32 mb-2 flex items-center justify-center">
-          <div className={`absolute inset-0 border border-teal-500/30 rounded-full ${!isMobile ? 'animate-[orbital-slow_12s_linear_infinite]' : ''} shadow-[0_0_15px_rgba(45,212,191,0.1)]`} />
-          {!isMobile && <div className="absolute inset-4 border border-white/15 rotate-12 animate-[orbital-slow_8s_linear_infinite_reverse]" />}
-          <div className={`absolute inset-8 border border-teal-500/40 rounded-sm rotate-45 ${!isMobile ? 'animate-[breathe_4s_ease-in-out_infinite]' : ''} shadow-[inset_0_0_10px_rgba(45,212,191,0.2)]`} />
+          <div className={`absolute inset-0 border border-teal-500/30 rounded-full animate-[orbital-slow_12s_linear_infinite] shadow-[0_0_15px_rgba(45,212,191,0.1)]`} />
+          <div className="absolute inset-4 border border-white/15 rotate-12 animate-[orbital-slow_8s_linear_infinite_reverse]" />
+          <div className={`absolute inset-8 border border-teal-500/40 rounded-sm rotate-45 animate-[breathe_4s_ease-in-out_infinite] shadow-[inset_0_0_10px_rgba(45,212,191,0.2)]`} />
           
           <svg viewBox="0 0 100 100" className="w-20 h-20 relative z-10 drop-shadow-[0_0_15px_rgba(45,212,191,0.4)]">
              <path d="M50 2 L56 12 L50 22 L44 12 Z" fill="white" />
@@ -99,9 +96,9 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
               key={i}
               className="brand-font text-white text-6xl md:text-8xl tracking-widest inline-block animate-[char-glide_1.4s_cubic-bezier(0.23,1,0.32,1)_forwards]"
               style={{ 
-                animationDelay: `${isMobile ? (i * 0.05) : (0.2 + (i * 0.12))}s`,
+                animationDelay: `${0.2 + (i * 0.12)}s`,
                 opacity: 0,
-                transform: isMobile ? 'translateY(10px)' : 'translateY(20px) scale(0.9)'
+                transform: 'translateY(20px) scale(0.9)'
               }}
             >
               {char}
@@ -145,12 +142,6 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
           0% { opacity: 0; transform: translateY(24px) scale(0.85); filter: blur(12px); }
           100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
         }
-        @media (max-width: 768px) {
-          @keyframes char-glide {
-            0% { opacity: 0; transform: translateY(10px); }
-            100% { opacity: 1; transform: translateY(0); }
-          }
-        }
         @keyframes orbital-slow {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }
@@ -167,7 +158,6 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
 const App: React.FC = () => {
   const { pathname } = useLocation();
   const [isLoading, setIsLoading] = useState(true);
-  const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -180,7 +170,7 @@ const App: React.FC = () => {
       <NoiseBackground />
       <Navigation />
       
-      <main className={`relative z-10 pt-20 transition-all duration-[1500ms] cubic-bezier(0.23, 1, 0.32, 1) ${isLoading ? `opacity-0 translate-y-6 ${isMobile ? '' : 'blur-2xl'}` : 'opacity-100 translate-y-0 blur-0'}`}>
+      <main className={`relative z-10 pt-20 transition-all duration-[1500ms] cubic-bezier(0.23, 1, 0.32, 1) ${isLoading ? 'opacity-0 translate-y-6 blur-2xl' : 'opacity-100 translate-y-0 blur-0'}`}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
