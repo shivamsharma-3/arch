@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import SystemExamples from './pages/SystemExamples';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Success from './pages/Success';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 
@@ -178,6 +179,7 @@ const App: React.FC = () => {
           <Route path="/system-examples" element={<SystemExamples />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/success" element={<Success />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
         </Routes>
