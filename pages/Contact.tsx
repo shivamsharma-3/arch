@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
- /* const form = e.currentTarget;
+  const form = e.currentTarget;
   const formData = new FormData(form);
 
   try {
@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
     alert("Submission failed. Please try again.");
   }
 };
-*/
+
 
   const selectStyle = {
     backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232dd4bf' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")`,
@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
          // action="/success.html"
-          onSubmit={handleSubmit}
+          //onSubmit={handleSubmit}
         >
          <input type="hidden" name="form-name" value="request-audit" />
          <input type="hidden" name="bot-field" />
