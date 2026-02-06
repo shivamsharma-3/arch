@@ -5,6 +5,27 @@ import { CheckCircle } from 'lucide-react';
 const Contact: React.FC = () => {
   const [crmSelection, setCrmSelection] = useState('');
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
+
+      alert("Form submitted successfully!");
+      form.reset();
+    } catch {
+      alert("Submission failed");
+    }
+  };
+
+
+
   const selectStyle = {
     backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232dd4bf' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")`,
     backgroundRepeat: 'no-repeat',
@@ -71,21 +92,19 @@ const Contact: React.FC = () => {
 
       <div className="md:w-1/2" id="audit-form-container">
         <form
-          name="contact"
+          name="request-audit"
           method="POST"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          action="/contact?success=true"
-          className="p-8 md:p-10 rounded-[2rem] bg-[#0d0d0f] md:bg-neutral-900/40 border border-white/5 md:backdrop-blur-xl shadow-2xl space-y-4"
+          onSubmit={handleSubmit}
         >
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="hidden" name="bot-field" />
+         <input type="hidden" name="form-name" value="request-audit" />
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-1">
               <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Full Name</label>
               <input 
                 required
+                type="text"
                 name="name"
                 className="w-full px-5 py-3 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
                 placeholder="John Doe"
@@ -107,6 +126,7 @@ const Contact: React.FC = () => {
             <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Company Name</label>
             <input 
               required
+              type="text"
               name="company"
               className="w-full px-5 py-3 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
               placeholder="Acme Corp"
@@ -134,11 +154,11 @@ const Contact: React.FC = () => {
             <select 
               required
               name="crm"
-              value={crmSelection}
-              onChange={(e) => setCrmSelection(e.target.value)}
+              defaultValue=""
               className="w-full px-5 py-3 rounded-2xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/10 outline-none text-white font-medium appearance-none text-sm cursor-pointer transition-all hover:bg-[#151d1d] shadow-inner"
               style={selectStyle}
             >
+
               <option value="" disabled>Select CRM...</option>
               <option value="HubSpot">HubSpot</option>
               <option value="Salesforce">Salesforce</option>
