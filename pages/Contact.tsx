@@ -6,23 +6,24 @@ const Contact: React.FC = () => {
   const [crmSelection, setCrmSelection] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const form = e.currentTarget;
-  const formData = new FormData(form);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-  try {
-    await fetch("/", {
-      method: "POST",
-      body: formData, // ✅ IMPORTANT: send FormData directly
-    });
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
 
-    alert("Form submitted successfully!");
-    form.reset();
-  } catch (err) {
-    alert("Submission failed. Please try again.");
-  }
-};
+      alert("Form submitted successfully!");
+      form.reset();
+    } catch {
+      alert("Submission failed");
+    }
+  };
+
 
 
   const selectStyle = {
@@ -94,7 +95,6 @@ const Contact: React.FC = () => {
           name="request-audit"
           method="POST"
           data-netlify="true"
-          action="/success.html"
           onSubmit={handleSubmit}
         >
          <input type="hidden" name="form-name" value="request-audit" />
@@ -104,6 +104,7 @@ const Contact: React.FC = () => {
               <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Full Name</label>
               <input 
                 required
+                type="text"
                 name="name"
                 className="w-full px-5 py-3 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
                 placeholder="John Doe"
@@ -125,6 +126,7 @@ const Contact: React.FC = () => {
             <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Company Name</label>
             <input 
               required
+              type="text"
               name="company"
               className="w-full px-5 py-3 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
               placeholder="Acme Corp"
