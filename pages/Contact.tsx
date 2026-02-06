@@ -6,25 +6,24 @@ const Contact: React.FC = () => {
   const [crmSelection, setCrmSelection] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+ /* const form = e.currentTarget;
+  const formData = new FormData(form);
 
-    try {
-      await fetch("/", {
-        method: "POST",
-        body: formData,
-      });
+  try {
+    await fetch("/", {
+      method: "POST",
+      body: formData, // ✅ IMPORTANT: send FormData directly
+    });
 
-      alert("Form submitted successfully!");
-      form.reset();
-    } catch {
-      alert("Submission failed");
-    }
-  };
-
-
+    alert("Form submitted successfully!");
+    form.reset();
+  } catch (err) {
+    alert("Submission failed. Please try again.");
+  }
+};
+*/
 
   const selectStyle = {
     backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232dd4bf' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")`,
@@ -95,9 +94,12 @@ const Contact: React.FC = () => {
           name="request-audit"
           method="POST"
           data-netlify="true"
-          onSubmit={handleSubmit}
+          data-netlify-honeypot="bot-field"
+         /* action="/success.html"
+          onSubmit={handleSubmit} */
         >
          <input type="hidden" name="form-name" value="request-audit" />
+         <input type="hidden" name="bot-field" />
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-1">
@@ -154,11 +156,11 @@ const Contact: React.FC = () => {
             <select 
               required
               name="crm"
-              defaultValue=""
+              value={crmSelection}
+              onChange={(e) => setCrmSelection(e.target.value)}
               className="w-full px-5 py-3 rounded-2xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/10 outline-none text-white font-medium appearance-none text-sm cursor-pointer transition-all hover:bg-[#151d1d] shadow-inner"
               style={selectStyle}
             >
-
               <option value="" disabled>Select CRM...</option>
               <option value="HubSpot">HubSpot</option>
               <option value="Salesforce">Salesforce</option>
