@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
       </div>
 
       <div className="md:w-1/2" id="audit-form-container">
-        <form class="p-8 md:p-12 rounded-[2rem] bg-neutral-900/40 border border-white/5 backdrop-blur-xl shadow-2xl space-y-6"
+        <form 
           name="request-audit"
           method="POST"
           data-netlify="true"
