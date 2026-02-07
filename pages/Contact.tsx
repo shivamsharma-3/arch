@@ -36,10 +36,10 @@ const Contact: React.FC = () => {
     <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10">
       <div className="md:w-1/2">
         <h1 className="text-5xl font-bold tracking-tighter mb-6 leading-tight">
-          Request your Revenue<br />System Audit.
+          Request Your Free Revenue<br />System Audit.
         </h1>
         <p className="text-xl text-neutral-400 font-medium leading-relaxed mb-8">
-          This complimentary audit is designed for B2B service companies that want a clear, repeatable system for booking qualified sales conversations — without relying on referrals or guesswork.
+          This audit identifies what’s broken in your outbound setup and what needs to change to book qualified sales calls consistently.
         </p>
         
         <div className="space-y-6">
@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
       </div>
 
       <div className="md:w-1/2" id="audit-form-container">
-        <form
+        <form class="p-8 md:p-12 rounded-[2rem] bg-neutral-900/40 border border-white/5 backdrop-blur-xl shadow-2xl space-y-6"
           name="request-audit"
           method="POST"
           data-netlify="true"
@@ -188,7 +188,7 @@ const Contact: React.FC = () => {
           <div className="pt-4 space-y-4">
             <Button className="w-full">Request Audit</Button>
             <p className="text-[10px] text-center text-neutral-500 font-black uppercase tracking-widest">
-              No contracts. No retainers discussed before the audit.
+              Free audit • No sales pitch • No obligation
             </p>
           </div>
           
