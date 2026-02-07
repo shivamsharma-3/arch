@@ -5,7 +5,7 @@ import { CheckCircle } from 'lucide-react';
 const Contact: React.FC = () => {
   const [crmSelection, setCrmSelection] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+/*  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
   const form = e.currentTarget;
@@ -24,6 +24,7 @@ const Contact: React.FC = () => {
   }
 };
 
+*/
   const selectStyle = {
     backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232dd4bf' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")`,
     backgroundRepeat: 'no-repeat',
