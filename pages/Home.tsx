@@ -9,143 +9,158 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative px-6 pt-12 pb-8 flex flex-col items-center text-center max-w-6xl mx-auto perspective-2000">
         
-        {/* Eyebrow / Context Line */}
+        {/* Eyebrow / Qualification */}
         <div className="group relative inline-flex items-center gap-3 px-6 py-2.5 rounded-full border border-teal-500/20 bg-[#0a1211] md:bg-teal-500/5 md:backdrop-blur-xl mb-8 overflow-hidden transition-all duration-700 hover:border-teal-500/40 hover:bg-teal-500/10 animate-reveal-up shadow-[0_0_40px_rgba(45,212,191,0.05)]">
           <div className="relative w-2 h-2">
             <div className="absolute inset-0 bg-teal-500 rounded-full animate-[ping_4s_cubic-bezier(0,0,0.2,1)_infinite] opacity-30"></div>
             <div className="relative w-2 h-2 bg-teal-500 rounded-full shadow-[0_0_10px_rgba(45,212,191,1)]"></div>
           </div>
-          <span className="text-teal-400 text-[11px] font-black tracking-[0.3em] uppercase leading-none antialiased">
-            FOR B2B SERVICE COMPANIES
+          <span className="text-teal-400 text-[9px] md:text-[11px] font-black tracking-[0.3em] uppercase leading-none antialiased">
+            DESIGNED FOR B2B SERVICE FIRMS WITH $10K+ ACV
           </span>
           <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-teal-500/40 to-transparent"></div>
         </div>
 
         {/* Primary Headline */}
-        <h3 className="relative text-6xl md:text-8xl lg:text-[80px] font-extrabold tracking-tighter leading-[0.9] mb-8 text-white animate-reveal-up" style={{ animationDelay: '0.2s' }}>
-          <span className="inline-block drop-shadow-[0_10px_20_rgba(0,0,0,0.5)]">We Build Predictable</span><br />
-          <span className="text-neutral-500 drop-shadow-[0_10px_20_rgba(0,0,0,0.5)]">Outbound Revenue Systems</span>
+        <h3 className="relative text-6xl md:text-8xl lg:text-[80px] font-extrabold tracking-tighter leading-[0.85] mb-6 text-white animate-reveal-up" style={{ animationDelay: '0.2s' }}>
+          <span className="inline-block drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">Revenue Infrastructure,</span><br />
+          <span className="text-neutral-500 drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">Not Revenue Luck.</span>
         </h3>
 
+        {/* Bridge Line */}
+        <p className="text-teal-500/80 text-sm md:text-base font-bold uppercase tracking-[0.2em] mb-6 animate-reveal-up" style={{ animationDelay: '0.3s' }}>
+          Systematizing the path from cold data to qualified sales meetings.
+        </p>
+
         {/* Subheadline */}
-        <p className="text-lg md:text-2xl text-neutral-500 max-w-4xl mb-4 font-light tracking-tight leading-relaxed animate-reveal-up" style={{ animationDelay: '0.4s' }}>
-          We design and operate outbound revenue infrastructure that helps B2B service companies consistently book qualified sales conversations - without relying on referrals, ads, or guesswork.
+        <p className="text-lg md:text-2xl text-neutral-400 max-w-3xl mb-12 font-medium tracking-tight leading-relaxed animate-reveal-up" style={{ animationDelay: '0.4s' }}>
+          We engineer the technical outbound systems required to sustain growth beyond your personal network. No marketing campaigns—just predictable pipeline architecture for serious B2B firms.
         </p>
 
-        {/* Supporting Clarification Line */}
-        <p className="text-sm md:text-base text-neutral-600 max-w-2xl mb-12 font-medium tracking-wide uppercase animate-reveal-up" style={{ animationDelay: '0.5s' }}>
-          Lead sourcing, outreach, CRM, and pipeline <br/> engineered as one system.
-        </p>
+        {/* CTA Block */}
+        <div className="flex flex-col items-center gap-6 mb-16 animate-reveal-up" style={{ animationDelay: '0.5s' }}>
+          <Button to="/contact" className="px-12 py-5 text-lg shadow-[0_20px_40px_rgba(255,255,255,0.1)]">
+            Request System Audit
+          </Button>
+          <div className="flex flex-col items-center gap-1">
+            <p className="text-[11px] text-neutral-500 font-black uppercase tracking-[0.3em]">
+              Partner-led manual review
+            </p>
+            <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest">
+              No sales deck. Zero obligation.
+            </p>
+          </div>
+        </div>
 
-        {/* What to expect block */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full mb-12 animate-reveal-up" style={{ animationDelay: '0.7s' }}>
+        {/* Audit Value Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full animate-reveal-up" style={{ animationDelay: '0.7s' }}>
           {[
-            { label: "Duration", val: "30–45 minute system review" },
-            { label: "Diagnosis", val: "Clear diagnosis of outbound setup" },
-            { label: "Deliverable", val: "Written summary with next steps" },
-            { label: "Commitment", val: "No obligation to proceed" }
+            { label: "Technical Review", val: "30–45 min System Audit" },
+            { label: "Pipeline Diagnosis", val: "Identify your conversion leaks" },
+            { label: "Blueprint", val: "Written Infrastructure Plan" },
+            { label: "Zero Friction", val: "Direct audit, not a sales pitch" }
           ].map((item, i) => (
-            <div key={i} className="px-6 py-4 rounded-2xl bg-white/[0.02] border border-white/5 text-left shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+            <div key={i} className="px-6 py-5 rounded-2xl bg-white/[0.02] border border-white/5 text-left shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-colors hover:bg-white/[0.04]">
               <div className="text-[9px] font-black text-teal-500/50 uppercase tracking-widest mb-1">{item.label}</div>
-              <div className="text-sm text-neutral-300 font-medium">{item.val}</div>
+              <div className="text-sm text-neutral-300 font-bold">{item.val}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Practice Section */}
-      <section className="px-6 max-w-6xl mx-auto w-full">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-8">
-          <div className="max-w-xl">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">
-              What this looks like in practice.
-            </h2>
-            <p className="text-neutral-400 text-lg font-medium leading-relaxed">
-              We don't sell hype or one-off campaigns. We build the operational plumbing required to sustain growth.
-            </p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Protocol Section */}
+      <section className="px-6 max-w-6xl mx-auto w-full py-12">
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center mb-12 text-white">
+          The Revenue Audit Protocol.
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { title: "Define", desc: "Identify your ideal customers with architectural precision." },
-            { title: "Build", desc: "Construct outbound systems to reach them at scale." },
-            { title: "Automate", desc: "Deploy follow-up logic and pipeline tracking nodes." },
-            { title: "Book", desc: "Generate qualified sales conversations consistently." }
-          ].map((card, i) => (
-            <DepthCard key={i}>
-              <div className="text-[10px] font-black text-teal-500/40 mb-4 uppercase tracking-[0.3em]">Module 0{i+1}</div>
-              <h3 className="text-xl font-bold mb-3 text-white">{card.title}</h3>
-              <p className="text-sm text-neutral-400 leading-relaxed font-medium">
-                {card.desc}
-              </p>
-            </DepthCard>
+            { 
+              step: "01", 
+              t: "Technical Ingestion", 
+              d: "We review your CRM architecture, data health, and current outbound delivery scores to find technical bottlenecks." 
+            },
+            { 
+              step: "02", 
+              t: "Logic Validation", 
+              d: "We stress-test your ICP targeting and messaging logic against current B2B market responses." 
+            },
+            { 
+              step: "03", 
+              t: "System Blueprint", 
+              d: "You receive a clear engineering document outlining the outbound plumbing needed to sustain growth." 
+            }
+          ].map((item, i) => (
+            <div key={i} className="relative p-10 rounded-3xl bg-neutral-800/30 border border-white/5 shadow-2xl">
+              <span className="text-5xl font-black text-teal-500/10 absolute top-6 right-8">{item.step}</span>
+              <h3 className="text-xl font-bold text-white mb-4">{item.t}</h3>
+              <p className="text-neutral-400 leading-relaxed text-sm font-medium">{item.d}</p>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* Operating Principles Section */}
-      <section className="px-6 max-w-6xl mx-auto w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      {/* Positioning Section */}
+      <section className="px-6 max-w-6xl mx-auto w-full py-20 border-t border-white/5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
-            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-6 text-white">
-              How ARCH operates.
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 text-white leading-tight">
+              Why ARCH is the<br />Standard in Revenue Ops.
             </h2>
-            <p className="text-neutral-400 text-lg font-medium mb-8 leading-relaxed max-w-md">
-              We approach revenue as an engineering discipline. Our principles dictate every technical decision we make for our partners.
+            <p className="text-neutral-400 text-xl font-medium mb-8 leading-relaxed">
+              Most "agencies" sell temporary hacks. We build permanent infrastructure. We treat outbound as a predictable engineering discipline, not a creative experiment.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="space-y-4">
             {[
-              { t: "Systems before tactics", d: "Isolated campaigns fail; unified systems compound." },
-              { t: "Clarity before scale", d: "Fix the conversion logic before turning up the volume." },
-              { t: "Infrastructure over experiments", d: "Build permanent assets, not temporary hacks." },
-              { t: "Long-term over quick wins", d: "Sustainable pipeline beats sporadic bursts." }
-            ].map((p, i) => (
-              <div key={i} className="p-6 rounded-2xl border border-white/5 bg-neutral-900/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                <h4 className="text-white font-bold text-sm mb-2">{p.t}</h4>
-                <p className="text-neutral-500 text-xs leading-relaxed">{p.d}</p>
+              { t: "Systems over Tactics", d: "Isolated campaigns fail. Unified systems compound in value over time." },
+              { t: "Infrastructure over Hype", d: "We focus on data-routing and conversion logic, not the latest AI gimmicks." },
+              { t: "Predictability over Sprints", d: "A steady, reliable pipeline beats sporadic bursts of referrals every time." }
+            ].map((item, i) => (
+              <div key={i} className="p-8 rounded-3xl bg-white/[0.02] border border-white/5 flex gap-6">
+                <div className="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center flex-shrink-0 text-teal-500 font-bold">/</div>
+                <div>
+                  <h4 className="text-white font-bold mb-1">{item.t}</h4>
+                  <p className="text-neutral-500 text-sm leading-relaxed">{item.d}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pipeline Architecture Section */}
-      <section className="px-6 max-w-7xl mx-auto w-full py-12 bg-neutral-900/10 rounded-[4rem] border border-white/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-teal-500/[0.01] pointer-events-none" />
-        <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold tracking-tight text-white mb-2">Revenue Pipeline Architecture</h2>
-          <p className="text-neutral-500 max-w-lg mx-auto text-sm font-medium italic">
-            Modular nodes connected by logic-driven operational triggers.
-          </p>
-        </div>
-        <SystemFlow />
-      </section>
-
-      {/* Good Fit / Not a Fit Section */}
-      <section className="px-6 max-w-6xl mx-auto w-full">
-        <div className="p-12 rounded-[3rem] border border-white/5 bg-neutral-900 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-          <h2 className="text-3xl font-bold text-center mb-10 text-white">Operational Fit</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h3 className="text-teal-400 font-black text-[11px] uppercase tracking-[0.3em]">Good Fit</h3>
-              <ul className="space-y-4">
-                {["B2B service companies with high contract values", "Founder-led or small specialized sales teams", "Teams seeking a predictable, managed outbound channel"].map((item, i) => (
+      {/* Disqualification Section */}
+      <section className="px-6 max-w-6xl mx-auto w-full py-12">
+        <div className="p-12 md:p-16 rounded-[4rem] border border-white/5 bg-[#0d0d0f] shadow-2xl relative overflow-hidden">
+          <div className="absolute inset-0 bg-teal-500/[0.01] pointer-events-none" />
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">Who we work with.</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="space-y-8">
+              <h3 className="text-teal-400 font-black text-[11px] uppercase tracking-[0.4em]">Optimal Partnership</h3>
+              <ul className="space-y-6">
+                {[
+                  "B2B Service companies with high-LTV contracts",
+                  "Firms with a validated offer seeking operational scale",
+                  "Leadership who values infrastructure over 'quick wins'"
+                ].map((item, i) => (
                   <li key={i} className="flex gap-4 items-start text-neutral-300 font-medium">
-                    <span className="text-teal-500 text-xl font-bold">/</span>
-                    <span className="leading-relaxed">{item}</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-teal-500 mt-2.5 flex-shrink-0" />
+                    <span className="leading-relaxed text-lg">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="space-y-6">
-              <h3 className="text-neutral-600 font-black text-[11px] uppercase tracking-[0.3em]">Not a Fit</h3>
-              <ul className="space-y-4">
-                {["Growth models primarily focused on paid ads", "Early-stage ventures with no validated offer", "Firms looking for short-term lead lists or tactics"].map((item, i) => (
+            <div className="space-y-8 opacity-60">
+              <h3 className="text-neutral-500 font-black text-[11px] uppercase tracking-[0.4em]">Non-Optimal Fit</h3>
+              <ul className="space-y-6">
+                {[
+                  "Early-stage ventures with unproven messaging",
+                  "Companies looking for one-off lead lists or 'hacks'",
+                  "Teams looking for creative agencies rather than operators"
+                ].map((item, i) => (
                   <li key={i} className="flex gap-4 items-start text-neutral-500 font-medium">
-                    <span className="text-neutral-700 text-xl font-bold">-</span>
-                    <span className="leading-relaxed">{item}</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-neutral-700 mt-2.5 flex-shrink-0" />
+                    <span className="leading-relaxed text-lg">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -155,43 +170,16 @@ const Home: React.FC = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="px-6 py-10 flex flex-col items-center text-center">
-        <div className="w-full max-w-4xl p-12 md:p-16 rounded-[3rem] bg-gradient-to-b from-neutral-900/40 to-neutral-900/10 border border-white/5 relative overflow-hidden group shadow-[0_50px_100px_rgba(0,0,0,0.4)]">
+      <section className="px-6 py-20 flex flex-col items-center text-center">
+        <div className="w-full max-w-4xl p-12 md:p-20 rounded-[4rem] bg-gradient-to-b from-neutral-900/40 to-neutral-900/10 border border-white/5 relative overflow-hidden group shadow-[0_50px_100px_rgba(0,0,0,0.4)]">
           <div className="absolute inset-0 bg-teal-500/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-          <h3 className="text-4xl md:text-6xl font-extrabold mb-6 text-white relative z-10 tracking-tighter max-w-2xl mx-auto leading-[1.1]">
-            Let’s build a revenue system that works.
+          <h3 className="text-4xl md:text-7xl font-extrabold mb-8 text-white relative z-10 tracking-tighter leading-[1]">
+            Build Your Revenue<br />Infrastructure.
           </h3>
-          <div className="flex flex-col items-center gap-8 relative z-10 mb-12">
+          <div className="flex flex-col items-center gap-8 relative z-10">
             <p className="text-xs text-neutral-500 uppercase tracking-widest font-bold">
-              No contracts. No retainers discussed before the audit.
+              No retainers. No sales pitch. Just a clear roadmap.
             </p>
-            <Button to="/contact" className="px-10 py-5 text-lg shadow-[0_20px_40px_rgba(255,255,255,0.1)]">
-              Request System Audit
-            </Button>
-          </div>
-
-          {/* Subtle Trust Signals */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-white/5 relative z-10 text-left">
-            <div>
-              <p className="text-xs text-neutral-400 font-medium leading-relaxed">
-                Built for B2B service companies with an established outbound motion. Not a fit for early-stage experiments or one-off campaigns.
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-neutral-400 font-medium leading-relaxed">
-                Every engagement begins with a system audit. No contracts. No retainers discussed before the audit.
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-neutral-400 font-medium leading-relaxed">
-                Our work focuses on building systems that produce consistent, repeatable sales conversations.
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-neutral-400 font-medium leading-relaxed">
-                All submissions are reviewed manually. Your information is never shared.
-              </p>
-            </div>
           </div>
         </div>
       </section>

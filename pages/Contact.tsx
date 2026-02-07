@@ -5,26 +5,6 @@ import { CheckCircle } from 'lucide-react';
 const Contact: React.FC = () => {
   const [crmSelection, setCrmSelection] = useState('');
 
-/*  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-
-  const form = e.currentTarget;
-  const formData = new FormData(form);
-
-  try {
-    await fetch("/", {
-      method: "POST",
-      body: formData, // ✅ IMPORTANT: send FormData directly
-    });
-
-    alert("Form submitted successfully!");
-    form.reset();
-  } catch (err) {
-    alert("Submission failed. Please try again.");
-  }
-};
-
-*/
   const selectStyle = {
     backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232dd4bf' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")`,
     backgroundRepeat: 'no-repeat',
@@ -33,168 +13,159 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10">
+    <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-16">
       <div className="md:w-1/2">
-        <h1 className="text-5xl font-bold tracking-tighter mb-6 leading-tight">
-          Request Your Free Revenue System Audit.
+        <h1 className="text-5xl font-bold tracking-tighter mb-8 leading-tight">
+          Request Your Technical<br />System Audit.
         </h1>
-        <p className="text-xl text-neutral-400 font-medium leading-relaxed mb-8">
-          We audit your CRM, targeting, and outbound infrastructure to show exactly what’s blocking consistent sales conversations — and how to fix it.
+        <p className="text-xl text-neutral-400 font-medium leading-relaxed mb-10">
+          This is a professional review of your outbound infrastructure. We identify the specific leaks in your pipeline and provide a technical blueprint for repeatable growth.
         </p>
         
-        <div className="space-y-6">
-          <div className="flex gap-4">
-            <div className="w-6 h-6 rounded bg-teal-500/20 text-teal-500 flex items-center justify-center text-xs font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 className="font-bold text-white">Revenue infrastructure review</h3>
-              <p className="text-sm text-neutral-500">We assess your current CRM, data quality, and outbound setup to identify what’s broken and what’s missing.</p>
+        <div className="space-y-8">
+          {[
+            { t: "Infrastructure Review", d: "We assess your CRM data health, outbound delivery scores, and technical setup." },
+            { t: "Logic Validation", d: "We stress-test your ICP and messaging logic against current B2B response data." },
+            { t: "System Blueprint", d: "A written roadmap for building a predictable, managed outbound channel." }
+          ].map((item, i) => (
+            <div key={i} className="flex gap-5">
+              <div className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-500 flex items-center justify-center text-sm font-black flex-shrink-0">{i+1}</div>
+              <div>
+                <h3 className="font-bold text-white text-lg">{item.t}</h3>
+                <p className="text-sm text-neutral-500 leading-relaxed">{item.d}</p>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-4">
-            <div className="w-6 h-6 rounded bg-teal-500/20 text-teal-500 flex items-center justify-center text-xs font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 className="font-bold text-white">Targeting & messaging validation</h3>
-              <p className="text-sm text-neutral-500">We review your ideal customer profile and outreach logic to ensure you’re speaking to the right buyers.</p>
-            </div>
-          </div>
-          <div className="flex gap-4">
-            <div className="w-6 h-6 rounded bg-teal-500/20 text-teal-500 flex items-center justify-center text-xs font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 className="font-bold text-white">System blueprint & next steps</h3>
-              <p className="text-sm text-neutral-500">You receive a clear, high-level plan outlining how your outbound system should be structured to produce consistent results.</p>
-            </div>
-          </div>
+          ))}
         </div>
 
-        <div className="mt-12 p-6 rounded-2xl bg-white/[0.02] border border-white/5">
-          <h4 className="text-[10px] font-black uppercase tracking-widest text-teal-500/70 mb-4">What to expect</h4>
-          <ul className="space-y-3">
-            <li className="text-sm text-neutral-400 flex items-center gap-3">
-              <div className="w-1 h-1 bg-teal-500/50 rounded-full" />
-              30–45 minute technical system review
-            </li>
-            <li className="text-sm text-neutral-400 flex items-center gap-3">
-              <div className="w-1 h-1 bg-teal-500/50 rounded-full" />
-              Clear diagnosis of current outbound setup
-            </li>
-            <li className="text-sm text-neutral-400 flex items-center gap-3">
-              <div className="w-1 h-1 bg-teal-500/50 rounded-full" />
-              Written summary with recommended architecture
-            </li>
-            <li className="text-sm text-neutral-400 flex items-center gap-3">
-              <div className="w-1 h-1 bg-teal-500/50 rounded-full" />
-              No obligation to proceed or sign a retainer
-            </li>
+        <div className="mt-12 p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5">
+          <h4 className="text-[10px] font-black uppercase tracking-widest text-teal-500/70 mb-6">Partnership Protocol</h4>
+          <ul className="space-y-4">
+            {[
+              "30–45 minute technical review",
+              "Direct diagnosis of current setup",
+              "Written summary of infrastructure gaps",
+              "Zero obligation to proceed"
+            ].map((li, i) => (
+              <li key={i} className="text-sm text-neutral-400 flex items-center gap-4">
+                <div className="w-1 h-1 bg-teal-500/50 rounded-full" />
+                <span className="font-medium">{li}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
 
       <div className="md:w-1/2" id="audit-form-container">
-        <form
-          name="request-audit"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          className="p-8 md:p-12 rounded-[2rem] bg-neutral-900/40 border border-white/5 backdrop-blur-xl shadow-2xl space-y-6"
-        >
-         <input type="hidden" name="form-name" value="request-audit" />
-         <input type="hidden" name="bot-field" />
+        <div className="p-8 md:p-12 rounded-[3rem] bg-[#0d0d0f] md:bg-neutral-900/40 border border-white/5 md:backdrop-blur-2xl shadow-2xl relative">
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-white mb-2">Audit Application</h2>
+            <p className="text-sm text-neutral-500 font-medium">All applications are reviewed manually by a partner.</p>
+          </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <form
+            name="request-audit"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            action="/success.html"
+            className="space-y-5"
+          >
+            <input type="hidden" name="form-name" value="request-audit" />
+            <input type="hidden" name="bot-field" />
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-1">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Full Name</label>
+                <input 
+                  required
+                  name="name"
+                  className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div className="space-y-1">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Work Email</label>
+                <input 
+                  required
+                  name="email"
+                  type="email"
+                  className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
+                  placeholder="john@company.com"
+                />
+              </div>
+            </div>
+            
             <div className="space-y-1">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Full Name</label>
+              <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Company Name</label>
               <input 
                 required
-                type="text"
-                name="name"
-                className="w-full px-5 py-3 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
-                placeholder="John Doe"
+                name="company"
+                className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
+                placeholder="Acme Corp"
               />
             </div>
-            <div className="space-y-1">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Work Email</label>
-              <input 
-                required
-                name="email"
-                type="email"
-                className="w-full px-5 py-3 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
-                placeholder="john@company.com"
-              />
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-1">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Team Size</label>
+                <select 
+                  required
+                  name="company_size" 
+                  className="w-full px-5 py-4 rounded-2xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/10 outline-none text-white font-medium appearance-none text-sm cursor-pointer transition-all hover:bg-[#151d1d] shadow-inner"
+                  style={selectStyle}
+                  defaultValue=""
+                >
+                  <option value="" disabled>Select size...</option>
+                  <option>1-10</option>
+                  <option>11-50</option>
+                  <option>51-200</option>
+                  <option>200+</option>
+                </select>
+              </div>
+              <div className="space-y-1">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Current CRM</label>
+                <select 
+                  required
+                  name="crm"
+                  value={crmSelection}
+                  onChange={(e) => setCrmSelection(e.target.value)}
+                  className="w-full px-5 py-4 rounded-2xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/10 outline-none text-white font-medium appearance-none text-sm cursor-pointer transition-all hover:bg-[#151d1d] shadow-inner"
+                  style={selectStyle}
+                >
+                  <option value="" disabled>Select CRM...</option>
+                  <option value="HubSpot">HubSpot</option>
+                  <option value="Salesforce">Salesforce</option>
+                  <option value="Pipedrive">Pipedrive</option>
+                  <option value="GoHighLevel">GoHighLevel</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
             </div>
-          </div>
-          
-          <div className="space-y-1">
-            <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Company Name</label>
-            <input 
-              required
-              type="text"
-              name="company"
-              className="w-full px-5 py-3 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
-              placeholder="Acme Corp"
-            />
-          </div>
 
-          <div className="space-y-1">
-            <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Company Size</label>
-            <select 
-              name="company_size" 
-              className="w-full px-5 py-3 rounded-2xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/10 outline-none text-white font-medium appearance-none text-sm cursor-pointer transition-all hover:bg-[#151d1d] shadow-inner"
-              style={selectStyle}
-              defaultValue=""
-            >
-              <option value="" disabled>Select company size...</option>
-              <option>1-10 employees</option>
-              <option>11-50 employees</option>
-              <option>51-200 employees</option>
-              <option>200+ employees</option>
-            </select>
-          </div>
+            {crmSelection === 'Other' && (
+              <div className="space-y-1 animate-in fade-in slide-in-from-top-2 duration-300">
+                <input 
+                  name="crm_other"
+                  className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
+                  placeholder="Enter CRM name"
+                />
+              </div>
+            )}
 
-          <div className="space-y-1">
-            <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Current CRM</label>
-            <select 
-              required
-              name="crm"
-              value={crmSelection}
-              onChange={(e) => setCrmSelection(e.target.value)}
-              className="w-full px-5 py-3 rounded-2xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/10 outline-none text-white font-medium appearance-none text-sm cursor-pointer transition-all hover:bg-[#151d1d] shadow-inner"
-              style={selectStyle}
-            >
-              <option value="" disabled>Select CRM...</option>
-              <option value="HubSpot">HubSpot</option>
-              <option value="Salesforce">Salesforce</option>
-              <option value="ActiveCampaign">ActiveCampaign</option>
-              <option value="Pipedrive">Pipedrive</option>
-              <option value="Zoho CRM">Zoho CRM</option>
-              <option value="Freshsales">Freshsales</option>
-              <option value="Close">Close</option>
-              <option value="GoHighLevel">GoHighLevel</option>
-              <option value="Other">Other (enter manually)</option>
-            </select>
-          </div>
-
-          {crmSelection === 'Other' && (
-            <div className="space-y-1 animate-in fade-in slide-in-from-top-2 duration-300">
-              <input 
-                name="crm_other"
-                className="w-full px-5 py-3 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700"
-                placeholder="Enter your CRM name"
-                autoFocus
-              />
+            <div className="pt-6 space-y-6">
+              <Button className="w-full py-5 text-base">Request System Audit</Button>
+              <div className="flex flex-col items-center gap-2">
+                <p className="text-[11px] text-neutral-500 font-black uppercase tracking-[0.3em]">
+                  Private Manual Review
+                </p>
+                <p className="text-[11px] text-neutral-500 font-medium">
+                  We typically respond within 12 business hours.
+                </p>
+              </div>
             </div>
-          )}
-
-          <div className="pt-4 space-y-4">
-            <Button className="w-full">Get My Free Audit</Button>
-            <p className="text-[10px] text-center text-neutral-500 font-black uppercase tracking-widest">
-              Free audit • No sales pitch • No obligation
-            </p>
-          </div>
-          
-          <p className="text-[10px] text-center text-neutral-600 font-medium uppercase tracking-tighter">
-            Trusted by B2B service teams using HubSpot, Salesforce & Pipedrive
-          </p>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
