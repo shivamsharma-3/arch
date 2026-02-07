@@ -75,8 +75,8 @@ const Contact: React.FC = () => {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          action="/success.html
-          //onSubmit={handleSubmit}
+          action="/success.html"
+          onSubmit={handleSubmit}
         >
          <input type="hidden" name="form-name" value="request-audit" />
          <input type="hidden" name="bot-field" />
