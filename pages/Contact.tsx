@@ -97,6 +97,7 @@ const Contact: React.FC = () => {
           data-netlify-honeypot="bot-field"
          // action="/success.html"
           //onSubmit={handleSubmit}
+          className="p-8 md:p-12 rounded-[2rem] bg-neutral-900/40 border border-white/5 backdrop-blur-xl shadow-2xl space-y-6"
         >
          <input type="hidden" name="form-name" value="request-audit" />
          <input type="hidden" name="bot-field" />
