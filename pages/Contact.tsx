@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Button from '../components/Button';
-import { CheckCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [crmSelection, setCrmSelection] = useState('');

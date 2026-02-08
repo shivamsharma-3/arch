@@ -35,10 +35,10 @@ const GlobalCTA: React.FC = () => {
           </Button>
           <div className="flex flex-col items-center gap-1">
             <p className="text-[10px] text-neutral-500 font-black uppercase tracking-[0.3em]">
-              Complementary Audit
+              Partner-led technical review
             </p>
             <p className="text-[9px] text-neutral-700 font-bold uppercase tracking-widest">
-              Limited slots available for Q2
+              No sales deck. Zero obligation.
             </p>
           </div>
         </div>

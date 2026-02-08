@@ -75,7 +75,7 @@ const Navigation: React.FC = () => {
             to="/contact"
             className="hidden sm:block px-5 py-2 rounded-full text-xs font-semibold bg-white text-black hover:bg-neutral-200 transition-all duration-300 shadow-lg hover:shadow-white/5 active:scale-95"
           >
-            Book Audit
+            Request Audit
           </Link>
           
           <button 
@@ -117,7 +117,7 @@ const Navigation: React.FC = () => {
             }`}
             style={{ transitionDelay: '400ms' }}
           >
-            Book Revenue Audit
+            Request Revenue Audit
           </Link>
 
           <div className={`mt-8 flex gap-8 transition-all duration-700 ${isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '500ms' }}>

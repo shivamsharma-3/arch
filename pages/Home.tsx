@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../components/Button';
-import DepthCard from '../components/DepthCard';
 import SystemFlow from '../components/SystemFlow';
 
 const Home: React.FC = () => {
@@ -15,45 +14,45 @@ const Home: React.FC = () => {
             <div className="absolute inset-0 bg-teal-500 rounded-full animate-[ping_4s_cubic-bezier(0,0,0.2,1)_infinite] opacity-30"></div>
             <div className="relative w-2 h-2 bg-teal-500 rounded-full shadow-[0_0_10px_rgba(45,212,191,1)]"></div>
           </div>
-          <span className="text-teal-400 text-[9px] md:text-[11px] font-black tracking-[0.3em] uppercase leading-none antialiased">
-            DESIGNED FOR B2B SERVICE FIRMS WITH $10K+ ACV
+          <span className="text-teal-400 text-[10px] md:text-[11px] font-black tracking-[0.3em] uppercase leading-none antialiased">
+            ENGINEERED FOR B2B SERVICE FIRMS WITH $1K+ ACV
           </span>
           <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-teal-500/40 to-transparent"></div>
         </div>
 
         {/* Primary Headline */}
-        <h3 className="relative text-6xl md:text-8xl lg:text-[80px] font-extrabold tracking-tighter leading-[0.85] mb-6 text-white animate-reveal-up" style={{ animationDelay: '0.2s' }}>
+        <h1 className="relative text-5xl md:text-8xl lg:text-[76px] font-extrabold tracking-tighter leading-[0.85] mb-6 text-white animate-reveal-up" style={{ animationDelay: '0.05s' }}>
           <span className="inline-block drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">Revenue Infrastructure,</span><br />
           <span className="text-neutral-500 drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">Not Revenue Luck.</span>
-        </h3>
+        </h1>
 
         {/* Bridge Line */}
-        <p className="text-teal-500/80 text-sm md:text-base font-bold uppercase tracking-[0.2em] mb-6 animate-reveal-up" style={{ animationDelay: '0.3s' }}>
-          Systematizing the path from cold data to qualified sales meetings.
+        <p className="text-teal-500/80 text-xs md:text-base font-bold uppercase tracking-[0.2em] mb-6 animate-reveal-up" style={{ animationDelay: '0.1s' }}>
+          Standardizing the mechanics of predictable outbound sales.
         </p>
 
         {/* Subheadline */}
-        <p className="text-lg md:text-2xl text-neutral-400 max-w-3xl mb-12 font-medium tracking-tight leading-relaxed animate-reveal-up" style={{ animationDelay: '0.4s' }}>
-          We engineer the technical outbound systems required to sustain growth beyond your personal network. No marketing campaigns—just predictable pipeline architecture for serious B2B firms.
+        <p className="text-base md:text-xl text-neutral-400 max-w-2xl mb-12 font-medium tracking-tight leading-relaxed animate-reveal-up" style={{ animationDelay: '0.15s' }}>
+          ARCH designs and operates the technical frameworks required to build a consistent pipeline without relying on referrals. We replace manual uncertainty with architectural precision.
         </p>
 
         {/* CTA Block */}
-        <div className="flex flex-col items-center gap-6 mb-16 animate-reveal-up" style={{ animationDelay: '0.5s' }}>
+        <div className="flex flex-col items-center gap-6 mb-16 animate-reveal-up" style={{ animationDelay: '0.2s' }}>
           <Button to="/contact" className="px-12 py-5 text-lg shadow-[0_20px_40px_rgba(255,255,255,0.1)]">
             Request System Audit
           </Button>
           <div className="flex flex-col items-center gap-1">
-            <p className="text-[11px] text-neutral-500 font-black uppercase tracking-[0.3em]">
-              Partner-led manual review
+            <p className="text-[10px] text-neutral-500 font-black uppercase tracking-[0.3em]">
+              Manual partner review
             </p>
-            <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest">
+            <p className="text-[9px] text-neutral-500 font-bold uppercase tracking-widest">
               No sales deck. Zero obligation.
             </p>
           </div>
         </div>
 
         {/* Audit Value Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full animate-reveal-up" style={{ animationDelay: '0.7s' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full animate-reveal-up" style={{ animationDelay: '0.3s' }}>
           {[
             { label: "Technical Review", val: "30–45 min System Audit" },
             { label: "Pipeline Diagnosis", val: "Identify your conversion leaks" },
