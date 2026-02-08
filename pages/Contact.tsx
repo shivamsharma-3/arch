@@ -154,8 +154,17 @@ const Contact: React.FC = () => {
 
             <div className="space-y-1">
               <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Message (Optional)</label>
-              <textarea 
+              <input 
                 name="message"
+                className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700 min-h-[120px] resize-none"
+                placeholder="Acme Corp"
+              />
+            </div>
+
+            <div className="space-y-1">
+              <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Message (Optional)</label>
+              <input
+                name="message1"
                 className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700 min-h-[120px] resize-none"
                 placeholder="Briefly describe your current revenue friction or specific goals..."
               />
