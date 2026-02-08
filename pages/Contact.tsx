@@ -119,7 +119,6 @@ const Contact: React.FC = () => {
                   <option value="11-50">11-50</option>
                   <option value="51-200">51-200</option>
                   <option value="200+">200+</option>
-
                 </select>
               </div>
               <div className="space-y-1">
@@ -131,7 +130,6 @@ const Contact: React.FC = () => {
                   className="w-full px-5 py-4 rounded-2xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/10 outline-none text-white font-medium appearance-none text-sm cursor-pointer transition-all hover:bg-[#151d1d] shadow-inner"
                   style={selectStyle}
                 >
-
                   <option value="" disabled>Select CRM...</option>
                   <option value="HubSpot">HubSpot</option>
                   <option value="Salesforce">Salesforce</option>
@@ -156,15 +154,6 @@ const Contact: React.FC = () => {
               <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Message (Optional)</label>
               <input 
                 name="message"
-                className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700 min-h-[120px] resize-none"
-                placeholder="Acme Corp"
-              />
-            </div>
-
-            <div className="space-y-1">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Message (Optional)</label>
-              <input
-                name="message1"
                 className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700 min-h-[120px] resize-none"
                 placeholder="Briefly describe your current revenue friction or specific goals..."
               />
