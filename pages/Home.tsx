@@ -31,9 +31,9 @@ const Home: React.FC = () => {
           Standardizing the mechanics of predictable outbound sales.
         </p>
 
-        {/* Subheadline */}
-        <p className="text-base md:text-xl text-neutral-400 max-w-2xl mb-12 font-medium tracking-tight leading-relaxed animate-reveal-up" style={{ animationDelay: '0.15s' }}>
-          ARCH designs and operates the technical frameworks required to build a consistent pipeline without relying on referrals. We replace manual uncertainty with architectural precision.
+        {/* Subheadline - CLARIFIED FOR 30-DAY OUTCOME */}
+        <p className="text-base md:text-xl text-neutral-400 max-w-3xl mb-12 font-medium tracking-tight leading-relaxed animate-reveal-up" style={{ animationDelay: '0.15s' }}>
+          We don't just advise; we install and operate. Within 30 days, ARCH maps your market, repairs your data plumbing, and deploys the first node of your managed outbound engine to replace manual uncertainty with architectural precision.
         </p>
 
         {/* CTA Block */}
@@ -62,6 +62,51 @@ const Home: React.FC = () => {
             <div key={i} className="px-6 py-5 rounded-2xl bg-white/[0.02] border border-white/5 text-left shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-colors hover:bg-white/[0.04]">
               <div className="text-[9px] font-black text-teal-500/50 uppercase tracking-widest mb-1">{item.label}</div>
               <div className="text-sm text-neutral-300 font-bold">{item.val}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* NEW SECTION: What the System Audit Actually Covers */}
+      <section className="px-6 max-w-6xl mx-auto w-full py-20 border-t border-white/5">
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center mb-4 text-white">
+          What the System Audit Covers.
+        </h2>
+        <p className="text-neutral-500 text-center mb-16 font-medium uppercase tracking-[0.2em] text-xs">Diagnostic components of your revenue blueprint.</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { 
+              t: "ICP Clarity & Mapping", 
+              d: "We identify exactly who you should be selling to by analyzing your highest-LTV clients and current market response data." 
+            },
+            { 
+              t: "Data Plumbing Diagnosis", 
+              d: "We audit your CRM health and data sourcing methods to identify technical leaks that are currently killing your conversion rates." 
+            },
+            { 
+              t: "Logic Validation", 
+              d: "We evaluate your targeting and messaging logic against current B2B response trends to verify market resonance." 
+            },
+            { 
+              t: "Outbound Pipeline Stress-Test", 
+              d: "An assessment of your current follow-up sequences and routing rules to find where prospects are falling out of the funnel." 
+            },
+            { 
+              t: "Infrastructure Gap Analysis", 
+              d: "A review of your technical stack to determine which tools are assets and which are creating operational friction." 
+            },
+            { 
+              t: "Actionable Revenue Blueprint", 
+              d: "The final output is a written, engineering-grade document outlining the exact outbound plumbing needed to sustain growth." 
+            }
+          ].map((item, i) => (
+            <div key={i} className="p-8 rounded-3xl bg-neutral-900/30 border border-white/5 shadow-xl">
+              <h3 className="text-teal-400 font-bold mb-3 text-lg flex items-center gap-3">
+                <span className="text-[10px] text-teal-500/40 font-mono">/0{i+1}</span>
+                {item.t}
+              </h3>
+              <p className="text-neutral-400 text-sm leading-relaxed font-medium">{item.d}</p>
             </div>
           ))}
         </div>
@@ -128,7 +173,33 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Disqualification Section */}
+      {/* NEW: Operational Success Section */}
+      <section className="px-6 max-w-6xl mx-auto w-full py-20 border-y border-white/5 bg-white/[0.01]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div>
+            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-teal-500/70 mb-4 block">The Phase-1 Outcome</span>
+            <h2 className="text-4xl font-bold text-white mb-6">Replacing manual uncertainty with a managed engine.</h2>
+            <p className="text-neutral-400 text-lg font-medium leading-relaxed">
+              Success after the initial build is defined by the removal of guesswork. We install a managed outbound system that works in the background to produce qualified sales conversations while providing full visibility into your pipeline health.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-4">
+            {[
+              "Consistent, automated outreach cadence",
+              "Managed outbound node operations",
+              "Direct injection of meetings into CRM",
+              "Full pipeline attribution & visibility"
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-4 px-6 py-4 rounded-2xl bg-neutral-900/50 border border-white/5">
+                <div className="w-1.5 h-1.5 rounded-full bg-teal-500" />
+                <span className="text-sm text-neutral-200 font-bold uppercase tracking-widest">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Disqualification Section - UPDATED WITH BOUNDARIES */}
       <section className="px-6 max-w-6xl mx-auto w-full py-12">
         <div className="p-12 md:p-16 rounded-[4rem] border border-white/5 bg-[#0d0d0f] shadow-2xl relative overflow-hidden">
           <div className="absolute inset-0 bg-teal-500/[0.01] pointer-events-none" />
@@ -150,12 +221,13 @@ const Home: React.FC = () => {
               </ul>
             </div>
             <div className="space-y-8 opacity-60">
-              <h3 className="text-neutral-500 font-black text-[11px] uppercase tracking-[0.4em]">Non-Optimal Fit</h3>
+              <h3 className="text-neutral-500 font-black text-[11px] uppercase tracking-[0.4em]">Operational Boundaries</h3>
               <ul className="space-y-6">
                 {[
-                  "Early-stage ventures with unproven messaging",
-                  "Companies looking for one-off lead lists or 'hacks'",
-                  "Teams looking for creative agencies rather than operators"
+                  "ARCH does NOT run paid ads or PPC campaigns",
+                  "We do NOT provide content marketing or SEO services",
+                  "We do NOT execute one-off lead-gen blasts",
+                  "We focus exclusively on revenue system architecture"
                 ].map((item, i) => (
                   <li key={i} className="flex gap-4 items-start text-neutral-500 font-medium">
                     <div className="w-1.5 h-1.5 rounded-full bg-neutral-700 mt-2.5 flex-shrink-0" />
