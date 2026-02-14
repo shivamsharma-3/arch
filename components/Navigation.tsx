@@ -33,7 +33,7 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6">
-      <div className="w-full max-w-5xl flex items-center justify-between px-6 py-3 rounded-full bg-neutral-900 md:bg-neutral-900/40 md:backdrop-blur-xl border border-white/5 shadow-2xl shadow-black/50 transition-all duration-500 hover:border-white/10 relative z-50">
+      <div className="w-full max-w-7xl flex items-center justify-between px-8 py-3 rounded-full bg-neutral-900 md:bg-neutral-900/40 md:backdrop-blur-xl border border-white/5 shadow-2xl shadow-black/50 transition-all duration-500 hover:border-white/10 relative z-50">
         <Link to="/" className="flex items-center gap-3 group">
           <div className="relative w-8 h-8 flex items-center justify-center transition-transform duration-500 ease-out group-hover:scale-110">
             {/* EXACT BRAND MARK REPLACEMENT FROM IMAGE */}

@@ -21,11 +21,11 @@ const NoiseBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#070709] contain-strict">
-      {/* Static Mesh Gradients - Increased Opacity */}
+    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#0c0c0e] contain-strict">
+      {/* Static Mesh Gradients - Increased Opacity for less darkness */}
       <div className="absolute inset-0 overflow-hidden opacity-100 transition-opacity duration-500">
         <div 
-          className={`absolute top-[-20%] left-[-10%] w-[140%] h-[140%] bg-[radial-gradient(circle_at_30%_20%,#2DD4BF26_0%,transparent_60%),radial-gradient(circle_at_70%_80%,#ffffff14_0%,transparent_60%)] ${
+          className={`absolute top-[-20%] left-[-10%] w-[140%] h-[140%] bg-[radial-gradient(circle_at_30%_20%,#2DD4BF33_0%,transparent_60%),radial-gradient(circle_at_70%_80%,#ffffff18_0%,transparent_60%)] ${
             isMobile ? 'blur-[60px]' : 'blur-[80px]'
           }`}
         />
@@ -86,12 +86,12 @@ const NoiseBackground: React.FC = () => {
         ))}
       </div>
 
-      {/* Static Central Glow - Increased Opacity */}
-      <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] h-[85vw] bg-teal-500/[0.14] ${isMobile ? 'blur-[80px]' : 'blur-[180px]'} rounded-full pointer-events-none`} />
+      {/* Static Central Glow - Softened and brightened */}
+      <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] h-[85vw] bg-teal-500/[0.18] ${isMobile ? 'blur-[80px]' : 'blur-[180px]'} rounded-full pointer-events-none`} />
 
-      {/* Vignettes */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,#050506_95%)]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50" />
+      {/* Softer Vignettes for reduced darkness */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_55%,#050506_90%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" />
 
       {/* Static Signal Traces */}
       {!isMobile && (

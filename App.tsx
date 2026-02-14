@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useMemo } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Navigation from './components/Navigation';
@@ -20,10 +19,10 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
   const [currentLog, setCurrentLog] = useState('INITIALIZING_BOOT_SEQUENCE...');
   
   const logs = useMemo(() => [
-    'PARSING_OUTBOUND_PLAN...',
-    'CALIBRATING_OUTREACH_NODES...',
+    'ANALYZING_OUTBOUND_SYSTEM...',
+    'CONFIGURING_OUTREACH_INFRASTRUCTURE...',
     'SYNCING_PIPELINE_CHANNELS...',
-    'ESTABLISHING_TARGET_TRACERS...',
+    'MAPPING_TARGET_ACCOUNTS...',
     'SYSTEM_VALIDATED'
   ], []);
 

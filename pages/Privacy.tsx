@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Privacy: React.FC = () => {
@@ -13,7 +12,7 @@ const Privacy: React.FC = () => {
         <section>
           <h2 className="text-lg font-bold text-white mb-4">1. Introduction</h2>
           <p>
-            ARCH respects your privacy. This policy explains how we handle information necessary to operate our website and provide revenue infrastructure services. We only collect data that is essential for our business operations.
+            ARCH respects your privacy. This policy explains how we handle information necessary to operate our website and provide outbound revenue system services. We only collect data that is essential for our business operations.
           </p>
         </section>
 
@@ -23,7 +22,7 @@ const Privacy: React.FC = () => {
           <ul className="list-disc pl-5 mt-4 space-y-2">
             <li>Name and business email address</li>
             <li>Company name and company size</li>
-            <li>CRM or operational details provided for audit requests</li>
+            <li>CRM details provided for audit requests</li>
             <li>Technical data such as page views and device type via standard analytics</li>
           </ul>
         </section>
@@ -32,7 +31,7 @@ const Privacy: React.FC = () => {
           <h2 className="text-lg font-bold text-white mb-4">3. How We Use Information</h2>
           <p>The information collected is used solely to:</p>
           <ul className="list-disc pl-5 mt-4 space-y-2">
-            <li>Respond to and process revenue system audit requests</li>
+            <li>Respond to and process outbound system audit requests</li>
             <li>Communicate regarding our services and your specific requirements</li>
             <li>Monitor and improve website performance and user experience</li>
             <li>Evaluate service fit for potential partnerships</li>

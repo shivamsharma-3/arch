@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Terms: React.FC = () => {
@@ -20,7 +19,7 @@ const Terms: React.FC = () => {
         <section>
           <h2 className="text-lg font-bold text-white mb-3">2. Services Overview</h2>
           <p>
-            ARCH provides professional consulting and implementation services related to revenue systems and outbound infrastructure. This website serves as an informational platform and a method for potential clients to request audits.
+            ARCH provides professional consulting and implementation services related to structured outbound revenue systems. This website serves as an informational platform and a method for potential clients to request audits.
           </p>
         </section>
 

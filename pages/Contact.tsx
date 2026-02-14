@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Button from '../components/Button';
 
@@ -12,7 +13,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-16">
+    <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-16">
       <div className="md:w-1/2">
         <h1 className="text-5xl font-bold tracking-tighter mb-8 leading-tight">
           Request Your Outbound<br />System Audit.

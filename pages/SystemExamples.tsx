@@ -8,7 +8,7 @@ const SystemExamples: React.FC = () => {
       type: "B2B SaaS Firm",
       problem: "Heavy reliance on referrals and sporadic inbound leads with inconsistent volume.",
       system: "Structured Outbound Engine targeting high-LTV enterprise decision makers with automated multi-channel logic.",
-      outcome: "Predictable pipeline growth with 12-15 qualified sales meetings booked per month consistently."
+      outcome: "Predictable pipeline growth with 6-10 qualified sales meetings booked per month consistently."
     },
     {
       type: "B2B Tech Agency",
@@ -25,7 +25,7 @@ const SystemExamples: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-10">
+    <div className="max-w-7xl mx-auto px-6 py-10">
       <header className="mb-10 text-center">
         <h1 className="text-5xl font-bold tracking-tighter mb-4">System Outcomes.</h1>
         <p className="text-xl text-neutral-400 max-w-2xl mx-auto font-medium">

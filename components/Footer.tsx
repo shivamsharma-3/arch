@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +9,7 @@ const Footer: React.FC = () => {
           {/* Brand & Mission */}
           <div className="max-w-xs space-y-6">
             <Link to="/" className="inline-block group">
-              <span className="text-2xl brand-font text-white transition-all duration-500 group-hover:tracking-[0.6em]">
+              <span className="text-2xl brand-font text-white transition-all duration-700 group-hover:text-teal-400 group-hover:tracking-[0.42em]">
                 ARCH
               </span>
             </Link>
