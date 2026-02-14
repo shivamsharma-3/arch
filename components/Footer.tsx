@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-neutral-500 text-sm font-medium leading-relaxed">
-              Industrial-grade revenue infrastructure for scaling B2B companies. Systems over stories.
+              Structured outbound revenue systems for scaling B2B companies. Systems over stories.
             </p>
           </div>
 
@@ -26,6 +26,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 <li><Link to="/how-it-works" className="text-sm text-neutral-400 hover:text-white transition-colors">How It Works</Link></li>
                 <li><Link to="/services" className="text-sm text-neutral-400 hover:text-white transition-colors">Services</Link></li>
+                <li><Link to="/roadmap" className="text-sm text-neutral-400 hover:text-white transition-colors">Roadmap</Link></li>
                 <li><Link to="/system-examples" className="text-sm text-neutral-400 hover:text-white transition-colors">Examples</Link></li>
               </ul>
             </div>

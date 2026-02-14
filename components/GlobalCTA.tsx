@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Button from './Button';
@@ -7,7 +8,7 @@ const GlobalCTA: React.FC = () => {
   
   // We avoid showing the global CTA on the contact page itself 
   // and pages that already have a specialized large CTA at the bottom.
-  const hideOn = ['/contact', '/', '/services'];
+  const hideOn = ['/contact', '/', '/services', '/roadmap'];
   if (hideOn.includes(location.pathname)) return null;
 
   return (
@@ -22,7 +23,7 @@ const GlobalCTA: React.FC = () => {
             <span className="text-[10px] font-black text-teal-400 uppercase tracking-widest">Available Now</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-extrabold tracking-tighter text-white mb-6 leading-[1.1]">
-            Ready to engineer your<br className="hidden md:block" /> revenue infrastructure?
+            Ready to engineer your<br className="hidden md:block" /> outbound revenue system?
           </h2>
           <p className="text-neutral-400 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
             Stop guessing and start building a predictable system for qualified meetings.
@@ -35,7 +36,7 @@ const GlobalCTA: React.FC = () => {
           </Button>
           <div className="flex flex-col items-center gap-1">
             <p className="text-[10px] text-neutral-500 font-black uppercase tracking-[0.3em]">
-              Partner-led technical review
+              Partner-led diagnostic review
             </p>
             <p className="text-[9px] text-neutral-700 font-bold uppercase tracking-widest">
               No sales deck. Zero obligation.

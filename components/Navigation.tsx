@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -9,6 +10,7 @@ const Navigation: React.FC = () => {
   const navItems = [
     { name: 'How It Works', path: '/how-it-works' },
     { name: 'Services', path: '/services' },
+    { name: 'Roadmap', path: '/roadmap' },
     { name: 'System Examples', path: '/system-examples' },
     { name: 'About', path: '/about' },
   ];
@@ -48,12 +50,12 @@ const Navigation: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`relative group py-1 text-sm font-medium transition-colors duration-300 ${
+              className={`relative group py-1 text-[13px] font-medium transition-colors duration-300 ${
                 isActive(item.path) ? 'text-white' : 'text-neutral-400 hover:text-white'
               }`}
             >
@@ -117,7 +119,7 @@ const Navigation: React.FC = () => {
             }`}
             style={{ transitionDelay: '400ms' }}
           >
-            Request Revenue Audit
+            Request System Audit
           </Link>
 
           <div className={`mt-8 flex gap-8 transition-all duration-700 ${isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '500ms' }}>

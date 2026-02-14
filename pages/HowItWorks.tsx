@@ -4,37 +4,37 @@ import Button from '../components/Button';
 const HowItWorks: React.FC = () => {
   const phases = [
     {
-      title: "System Audit",
-      description: "We dive into your existing CRM, target market, and current sales process to identify where the leaks are. We map out the gaps between your current state and a predictable outbound machine.",
-      details: ["Data integrity check", "Market fit verification", "Infrastructure gaps"]
+      title: "Outbound System Audit",
+      description: "We evaluate your current outbound efforts, targeting logic, and pipeline performance to identify structural gaps.",
+      details: ["Outreach gap analysis", "Market fit verification", "Pipeline performance review"]
     },
     {
-      title: "Architecture Design",
-      description: "We don't use templates. We design a custom revenue blueprint based on your ACV, sales cycle, and technical stack. This is the master plan for your outbound and inbound engine.",
-      details: ["Sequence logic", "Logic branching", "Technical routing"]
+      title: "ICP & Messaging Architecture",
+      description: "We define your ideal customer profile and design messaging frameworks built for response.",
+      details: ["ICP architecture", "Messaging logic", "Response pattern validation"]
     },
     {
-      title: "Core Integration",
-      description: "Our engineers build the system. We connect your CRM, set up outbound servers, install tracking pixels, and deploy the initial outreach nodes. High-trust infrastructure-grade build.",
-      details: ["Outbound plumbing", "API integrations", "Salesforce/HubSpot sync"]
+      title: "Outbound Engine Deployment",
+      description: "We build prospect lists, launch outreach campaigns, and manage follow-ups on your behalf.",
+      details: ["Technical stack setup", "Campaign deployment", "Follow-up management"]
     },
     {
-      title: "Optimization Loop",
-      description: "A system isn't 'done.' We monitor the data, tweak the logic, and refine the targeting until the pipeline is flowing at the desired capacity. We stay on as operators.",
-      details: ["Continuous AB testing", "Logic refinement", "Monthly scaling audits"]
+      title: "Optimization & Scaling",
+      description: "We refine targeting, messaging, and cadence to increase meeting volume and consistency.",
+      details: ["Messaging iteration", "Database maintenance", "Performance scaling"]
     }
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-10">
-      <header className="mb-10">
-        <h1 className="text-5xl font-bold tracking-tighter mb-4">Built to endure.</h1>
+    <div className="max-w-5xl mx-auto px-6 py-6">
+      <header className="mb-8">
+        <h1 className="text-5xl font-bold tracking-tighter mb-2">The Outbound Protocol.</h1>
         <p className="text-xl text-neutral-400 max-w-2xl font-medium leading-relaxed">
-          Our methodology is derived from systems engineering, not marketing textbooks. We build for reliability and scale.
+          Our methodology is rooted in systems engineering. We build outbound pipelines for long-term predictability and scale.
         </p>
       </header>
 
-      <div className="space-y-6">
+      <div className="space-y-4">
         {phases.map((phase, i) => (
           <div 
             key={i}
@@ -69,8 +69,8 @@ const HowItWorks: React.FC = () => {
         ))}
       </div>
 
-      <section className="mt-16 text-center">
-        <p className="text-neutral-500 italic font-medium">Ready to see the blueprint for your business?</p>
+      <section className="mt-12 text-center">
+        <p className="text-neutral-500 italic font-medium">Ready to see the blueprint for your outbound growth?</p>
       </section>
     </div>
   );

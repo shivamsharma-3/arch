@@ -9,56 +9,56 @@ const Services: React.FC = () => {
       title: "Outbound Revenue Systems",
       phase: "Phase 1: Revenue Generation Engine",
       icon: Send,
-      whatIs: "Managed outbound infrastructure.",
-      friction: "Manual prospecting, inconsistent outreach, low response rates, and an unreliable sales pipeline.",
-      outcome: "A managed outbound engine that consistently produces qualified sales conversations and feeds them directly into your pipeline.",
+      whatIs: "Managed outbound systems.",
+      friction: "Manual prospecting, inconsistent outreach cadence, and an unreliable sales pipeline.",
+      outcome: "We design and operate structured outbound pipelines that consistently generate qualified sales meetings for B2B service companies.",
       includes: [
-        "Ideal customer profile mapping logic",
-        "Technical outbound node deployment",
-        "Sequence architecture & logic branching",
-        "Managed delivery & reputation monitoring",
+        "ICP mapping & market targeting",
+        "Technical outreach node setup",
+        "Outbound sequence architecture",
+        "Managed multi-channel delivery",
         "Qualified pipeline injection"
       ],
-      who: "Founder-led B2B service companies ($1k+ ACV) looking for predictable outbound results."
+      who: "Founder-led B2B service firms seeking a predictable outbound engine."
     },
     {
-      title: "CRM & Pipeline Architecture",
-      phase: "Phase 2: Revenue Visibility & Control",
+      title: "Pipeline Structure & Visibility",
+      phase: "Phase 2: Lead Tracking & Attribution",
       icon: Database,
-      whatIs: "Revenue visibility & data plumbing.",
-      friction: "Messy CRM data, unclear pipeline stages, and no reliable view of what is driving revenue.",
-      outcome: "A high-integrity CRM structure where every interaction is tracked from first touch to close.",
+      whatIs: "Structured lead monitoring.",
+      friction: "Unclear lead status, inconsistent tracking, and no visibility into outbound performance.",
+      outcome: "We bring structure to your sales pipeline by aligning outbound activity with clear tracking and stage visibility. No complex CRM rebuilds — just clarity and consistency.",
       includes: [
-        "CRM restructuring for scale",
-        "Automated pipeline stage logic",
-        "Multi-source lead attribution",
-        "Executive revenue visibility dashboards"
+        "Light CRM alignment for outbound",
+        "Automated lead status tracking",
+        "Outbound attribution logic",
+        "Performance visibility dashboards"
       ],
-      who: "Growing B2B teams requiring institutional data grade."
+      who: "B2B teams requiring better control over their outbound lead data."
     },
     {
-      title: "Revenue Ops Management",
-      phase: "Phase 3: Long-Term System Stability",
+      title: "Ongoing Outbound Operations",
+      phase: "Phase 3: Continuous System Stability",
       icon: Workflow,
-      whatIs: "Long-term system stability.",
-      friction: "Revenue systems that degrade over time due to technical debt or lack of oversight.",
-      outcome: "Continuous operational stability without the overhead of an internal Ops team.",
+      whatIs: "Managed outbound management.",
+      friction: "Outbound performance that degrades over time due to messaging fatigue or lack of optimization.",
+      outcome: "We continue operating and optimizing your outbound engine — refining targeting, messaging, and cadence to maintain a steady flow of qualified meetings.",
       includes: [
-        "Ongoing system health monitoring",
-        "Protocol & tool stack optimization",
-        "Technical documentation maintenance",
-        "Scaling logic adjustments"
+        "Ongoing outreach health monitoring",
+        "Messaging & logic refinement",
+        "Database maintenance & cleaning",
+        "Continuous performance loops"
       ],
-      who: "Teams that view their revenue stack as a critical long-term asset."
+      who: "Firms that view outbound as a critical long-term growth asset."
     }
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-8 md:py-12">
-      <header className="mb-12 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 text-white">Infrastructure-Grade Services.</h1>
+    <div className="max-w-6xl mx-auto px-6 py-6 md:py-8">
+      <header className="mb-8 text-center">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tighter mb-2 text-white">Outbound System Services.</h1>
         <p className="text-base md:text-lg text-neutral-400 max-w-2xl mx-auto font-medium leading-relaxed">
-          These systems are deployed progressively, beginning with a System Audit and expanding as revenue maturity increases.
+          Our systems are deployed progressively, starting with an Outbound Audit and expanding as your pipeline matures.
         </p>
       </header>
 
@@ -109,27 +109,27 @@ const Services: React.FC = () => {
       </div>
 
       {/* Audit CTA Block */}
-      <div className="mt-12 p-8 md:p-12 rounded-[2.5rem] bg-[#0d0d0f] md:bg-neutral-900/40 border border-white/5 md:backdrop-blur-xl flex flex-col items-center gap-10 shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
+      <div className="mt-8 p-8 md:p-10 rounded-[2.5rem] bg-[#0d0d0f] md:bg-neutral-900/40 border border-white/5 md:backdrop-blur-xl flex flex-col items-center gap-8 shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-8">
           <div className="max-w-xl text-center md:text-left">
-            <h3 className="text-2xl md:text-3xl font-extrabold mb-3 text-white tracking-tight">Start with a Revenue System Audit</h3>
+            <h3 className="text-2xl md:text-3xl font-extrabold mb-2 text-white tracking-tight">Start with an Outbound System Audit</h3>
             <p className="text-neutral-400 text-sm md:text-base font-medium leading-relaxed">
-              Every partnership begins with a system audit to define scope, priorities, and architectural fit.
+              Every partnership begins with a diagnostic audit to define scope, targeting, and system fit.
             </p>
           </div>
           <div className="flex flex-col items-center gap-4">
-            <Button to="/contact" className="px-10 py-4 text-xs font-black uppercase tracking-widest">Request System Audit</Button>
+            <Button to="/contact" className="px-10 py-4 text-xs font-black uppercase tracking-widest">Request Outbound Audit</Button>
             <p className="text-[8px] text-neutral-600 uppercase tracking-[0.3em] font-black">No retainers discussed before the audit.</p>
           </div>
         </div>
 
         {/* Technical Signals */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-10 border-t border-white/5 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 border-t border-white/5 w-full">
           {[
-            "Built for B2B service companies with high-LTV contracts. Not a fit for early-stage experiments.",
-            "Architectural focus on building managed systems, not running one-off marketing campaigns.",
-            "The System Audit provides a clear technical roadmap for your outbound engine before any commitment.",
-            "Direct partner-led audits. We operate without account managers or sales representatives."
+            "Built for B2B service companies with high-LTV contracts. Not a fit for low-ticket or e-commerce.",
+            "Architectural focus on managed outbound systems, not one-off lead generation blasts.",
+            "The Outbound Audit provides a clear system roadmap for your pipeline before any commitment.",
+            "Direct partner-led audits. We operate with high internal rigor and zero sales overhead."
           ].map((text, i) => (
             <div key={i} className="flex flex-col gap-2">
               <div className="w-1 h-1 rounded-full bg-teal-500/20" />

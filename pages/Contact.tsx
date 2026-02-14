@@ -15,17 +15,17 @@ const Contact: React.FC = () => {
     <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-16">
       <div className="md:w-1/2">
         <h1 className="text-5xl font-bold tracking-tighter mb-8 leading-tight">
-          Request Your Technical<br />System Audit.
+          Request Your Outbound<br />System Audit.
         </h1>
         <p className="text-xl text-neutral-400 font-medium leading-relaxed mb-10">
-          This is a professional review of your outbound infrastructure. We identify the specific leaks in your pipeline and provide a technical blueprint for repeatable growth.
+          A professional review of your outbound pipeline. We identify targeting leaks and provide a structured roadmap for predictable growth.
         </p>
         
         <div className="space-y-8">
           {[
-            { t: "Infrastructure Review", d: "We assess your CRM data health, outbound delivery scores, and technical setup." },
-            { t: "Logic Validation", d: "We stress-test your ICP and messaging logic against current B2B response data." },
-            { t: "System Blueprint", d: "A written roadmap for building a predictable, managed outbound channel." }
+            { t: "Targeting Review", d: "We assess your ICP mapping and prospect data quality to ensure high-fit outreach." },
+            { t: "Logic Validation", d: "We stress-test your outreach messaging and sequence logic against B2B response trends." },
+            { t: "Outbound Blueprint", d: "A written roadmap for installing a predictable, managed outbound channel." }
           ].map((item, i) => (
             <div key={i} className="flex gap-5">
               <div className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-500 flex items-center justify-center text-sm font-black flex-shrink-0">{i+1}</div>
@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
             {[
               "30–45 minute technical review",
               "Direct diagnosis of current setup",
-              "Written summary of infrastructure gaps",
+              "Written summary of system gaps",
               "Zero obligation to proceed"
             ].map((li, i) => (
               <li key={i} className="text-sm text-neutral-400 flex items-center gap-4">
@@ -127,6 +127,8 @@ const Contact: React.FC = () => {
                   required
                   name="crm"
                   defaultValue=""
+                  value={crmSelection}
+                  onChange={(e) => setCrmSelection(e.target.value)}
                   className="w-full px-5 py-4 rounded-2xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/10 outline-none text-white font-medium appearance-none text-sm cursor-pointer transition-all hover:bg-[#151d1d] shadow-inner"
                   style={selectStyle}
                 >
@@ -155,7 +157,7 @@ const Contact: React.FC = () => {
               <textarea 
                 name="message"
                 className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/20 transition-all outline-none text-white font-medium text-sm placeholder-neutral-700 min-h-[120px] resize-none"
-                placeholder="Briefly describe your current revenue friction or specific goals..."
+                placeholder="Describe your current outreach friction or goals..."
               />
             </div>
 
@@ -163,7 +165,7 @@ const Contact: React.FC = () => {
               <Button className="w-full py-5 text-base">Request System Audit</Button>
               <div className="flex flex-col items-center gap-2">
                 <p className="text-[11px] text-neutral-500 font-black uppercase tracking-[0.3em]">
-                  Private Manual Review
+                  Private Partner Review
                 </p>
                 <p className="text-[11px] text-neutral-500 font-medium">
                   We typically respond within 12 business hours.

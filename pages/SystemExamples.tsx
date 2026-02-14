@@ -5,31 +5,31 @@ import DepthCard from '../components/DepthCard';
 const SystemExamples: React.FC = () => {
   const examples = [
     {
-      type: "Series A B2B SaaS",
-      problem: "Heavy reliance on inbound content and paid ads with volatile lead costs.",
-      system: "Multichannel Outbound Architecture with automated LinkedIn/Email integration and intent data monitoring.",
-      outcome: "Predictable pipeline growth that allowed the team to reduce paid ad spend by 40%."
+      type: "B2B SaaS Firm",
+      problem: "Heavy reliance on referrals and sporadic inbound leads with inconsistent volume.",
+      system: "Structured Outbound Engine targeting high-LTV enterprise decision makers with automated multi-channel logic.",
+      outcome: "Predictable pipeline growth with 12-15 qualified sales meetings booked per month consistently."
     },
     {
-      type: "Global Tech Agency",
-      problem: "Founder was doing all sales outreach manually; referrals were drying up.",
-      system: "Automated Outbound Logic Engine focused on high-ACV Fortune 500 decision makers.",
-      outcome: "Standardized outreach process that books 4-6 qualified enterprise meetings per month consistently."
+      type: "B2B Tech Agency",
+      problem: "Founder was conducting all manual outreach, leading to dry spells between project deliveries.",
+      system: "Managed Outbound Architecture focused on niche-market mapping and automated follow-up logic.",
+      outcome: "Standardized outreach process that maintains a full pipeline without founder involvement."
     },
     {
-      type: "Professional Services Firm",
-      problem: "No centralized CRM; leads were lost in spreadsheets; no follow-up logic.",
-      system: "CRM & Pipeline overhaul + automated nurturing loops for cold leads.",
-      outcome: "Full visibility into sales cycle length and lead source ROI for the first time."
+      type: "Consulting Services",
+      problem: "Lack of targeting clarity and inconsistent messaging led to low outreach response rates.",
+      system: "ICP Redefinition and Outbound Messaging overhaul combined with managed multi-channel sequences.",
+      outcome: "3x increase in meeting set-rate and improved lead quality from high-fit target accounts."
     }
   ];
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-10">
       <header className="mb-10 text-center">
-        <h1 className="text-5xl font-bold tracking-tighter mb-4">Proven Architecture.</h1>
+        <h1 className="text-5xl font-bold tracking-tighter mb-4">System Outcomes.</h1>
         <p className="text-xl text-neutral-400 max-w-2xl mx-auto font-medium">
-          Real systems, built for real companies. No vanity metrics—just operational infrastructure that produces results.
+          Operational outbound systems built for real growth. We focus on qualified meetings and pipeline injection.
         </p>
       </header>
 
@@ -46,11 +46,11 @@ const SystemExamples: React.FC = () => {
               </div>
               <div className="md:w-2/3 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">The System Built</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">The System Installed</h3>
                   <p className="text-neutral-300 font-medium leading-relaxed mb-6 text-sm">{example.system}</p>
                 </div>
                 <div className="pt-6 border-t border-white/5">
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-teal-500/70 mb-1">Expected Outcome</h4>
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-teal-500/70 mb-1">Measurable Result</h4>
                   <p className="text-neutral-400 font-medium text-sm">{example.outcome}</p>
                 </div>
               </div>

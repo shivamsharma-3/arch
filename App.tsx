@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useMemo } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Navigation from './components/Navigation';
@@ -6,6 +7,7 @@ import NoiseBackground from './components/NoiseBackground';
 import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
 import Services from './pages/Services';
+import Roadmap from './pages/Roadmap';
 import SystemExamples from './pages/SystemExamples';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -18,17 +20,16 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
   const [currentLog, setCurrentLog] = useState('INITIALIZING_BOOT_SEQUENCE...');
   
   const logs = useMemo(() => [
-    'PARSING_BLUEPRINT_V4...',
-    'CALIBRATING_OUTBOUND_NODES...',
-    'SYNCING_REVENUE_CHANNELS...',
-    'ESTABLISHING_DATA_TRACERS...',
-    'ARCHITECTURE_VALIDATED'
+    'PARSING_OUTBOUND_PLAN...',
+    'CALIBRATING_OUTREACH_NODES...',
+    'SYNCING_PIPELINE_CHANNELS...',
+    'ESTABLISHING_TARGET_TRACERS...',
+    'SYSTEM_VALIDATED'
   ], []);
 
   useEffect(() => {
     let frameId: number;
     let startTimestamp: number | null = null;
-    // Added 1000ms to duration
     const duration = window.innerWidth < 768 ? 2400 : 3000;
 
     const animate = (timestamp: number) => {
@@ -36,7 +37,6 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
       const elapsed = timestamp - startTimestamp;
       const p = Math.min(elapsed / duration, 1);
       
-      // Smoother easing function
       const easedP = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
       setProgress(Math.round(easedP * 100));
 
@@ -76,15 +76,12 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
 
       <div className="flex flex-col items-center gap-14 w-full max-w-lg px-8 relative will-change-transform">
         <div className="relative w-28 h-28 md:w-36 md:h-36 mb-2 flex items-center justify-center">
-          {/* Enhanced Visibility Background Animations */}
           <div className="absolute inset-0 border-[1.5px] border-teal-500/40 rounded-full animate-[orbital-slow_15s_linear_infinite]" />
           <div className="absolute inset-4 border border-white/20 rotate-12 animate-[orbital-slow_10s_linear_infinite_reverse]" />
           <div className="absolute inset-8 border border-teal-500/60 rounded-sm rotate-45 animate-[breathe_4s_ease-in-out_infinite]" />
           
-          {/* Background Glow */}
           <div className="absolute inset-0 bg-teal-500/10 blur-3xl rounded-full animate-pulse pointer-events-none" />
           
-          {/* Logo SVG with increased shadow and visibility */}
           <svg viewBox="0 0 100 100" className="w-16 h-16 md:w-24 md:h-24 relative z-10 drop-shadow-[0_0_25px_rgba(45,212,191,0.8)] will-change-transform">
              <path d="M50 2 L56 12 L50 22 L44 12 Z" fill="white" />
              <path d="M43 28 L12 95 L38 95 L48 55 Z" fill="white" />
@@ -172,6 +169,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/system-examples" element={<SystemExamples />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
