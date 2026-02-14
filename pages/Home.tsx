@@ -21,7 +21,7 @@ const Home: React.FC = () => {
 
         {/* Primary Headline */}
         <h1 className="relative text-4xl md:text-6xl lg:text-[72px] font-bold tracking-tight mb-8 text-white animate-reveal-up" style={{ animationDelay: '0.05s' }}>
-          Outbound Revenue Systems, Not Revenue Luck.
+          Outbound Revenue Systems,<br />Not Revenue Luck.
         </h1>
 
         {/* Bridge Line */}
