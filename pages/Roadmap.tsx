@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../components/Button';
 import DepthCard from '../components/DepthCard';
 
-const Roadmap: React.FC = () => {
+const Roadmap = () => {
   const phases = [
     {
       title: "Phase 01 — Outbound Foundation",
