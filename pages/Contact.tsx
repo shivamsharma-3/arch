@@ -59,11 +59,11 @@ const Contact: React.FC = () => {
       <div className="lg:w-1/2 max-w-xl" id="audit-form-container">
         
         {/* Step 9 — Pre-Frame Section */}
-        <div className="mb-6 px-7 py-5 rounded-2xl bg-[#0a1211] border border-teal-500/60 shadow-lg animate-reveal-up">
+        <div className="mb-6 px-7 py-5 rounded-2xl bg-[#0a1211] border border-teal-500/10 shadow-lg animate-reveal-up">
           <h4 className="text-[9px] font-black uppercase tracking-[0.2em] text-teal-400 mb-3">Diagnostic Eligibility</h4>
           <ul className="space-y-2">
             {[
-              "B2B service firms doing $2K+ per month",
+              "B2B service firms doing $25K+ per month",
               "Founders relying too heavily on referrals",
               "Teams wanting predictable outbound pipeline"
             ].map((bullet, i) => (
@@ -76,11 +76,11 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Compact Form Container */}
-        <div className="p-7 md:p-9 rounded-[2rem] bg-[#0d0d0f] md:bg-neutral-900/50 border border-white/10 md:backdrop-blur-3xl shadow-2xl relative animate-reveal-up" style={{ animationDelay: '0.1s' }}>
+        <div className="p-7 md:p-9 rounded-[2rem] bg-[#0d0d0f] md:bg-neutral-900/60 border border-white/10 md:backdrop-blur-3xl shadow-2xl relative animate-reveal-up" style={{ animationDelay: '0.1s' }}>
           
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-2.5">
-               <div className="w-1.5 h-1.5 rounded-full bg-teal-400 shadow-[0_0_6px_rgba(45,212,191,0.6)]" />
+               <div className="w-1.5 h-1.5 rounded-full bg-teal-500 shadow-[0_0_6px_rgba(45,212,191,0.6)]" />
                <span className="text-[8px] font-black uppercase tracking-[0.2em] text-teal-500/80">Selective Onboarding</span>
             </div>
             <h2 className="text-xl font-bold text-white mb-1.5 tracking-tight">Diagnostic Application</h2>
