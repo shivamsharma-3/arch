@@ -127,9 +127,6 @@ const Roadmap: React.FC = () => {
           <p className="text-neutral-400 text-lg font-medium mb-10">
             Start with a structured audit. Build from foundation to scale.
           </p>
-          <Button to="/contact" className="px-12 py-5 text-lg">
-            Request System Audit
-          </Button>
         </div>
       </section>
     </div>
