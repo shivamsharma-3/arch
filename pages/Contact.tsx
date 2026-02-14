@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
           <h4 className="text-[9px] font-black uppercase tracking-[0.2em] text-teal-400 mb-3">Diagnostic Eligibility</h4>
           <ul className="space-y-2">
             {[
-              "B2B service firms doing $25K+ per month",
+              "B2B service firms doing $2K+ per month",
               "Founders relying too heavily on referrals",
               "Teams wanting predictable outbound pipeline"
             ].map((bullet, i) => (
@@ -172,10 +172,10 @@ const Contact: React.FC = () => {
                   defaultValue=""
                 >
                   <option value="" disabled>Select range...</option>
-                  <option value="Under $25K">Under $2K</option>
-                  <option value="$25K–$75K">$2K–$7K</option>
-                  <option value="$75K–$200K">$7K–$20K</option>
-                  <option value="$200K+">$20K+</option>
+                  <option value="Under $2K">Under $2K</option>
+                  <option value="$2K–$7K">$2K–$7K</option>
+                  <option value="$7K–$20K">$7K–$20K</option>
+                  <option value="$20K+">$20K+</option>
                 </select>
               </div>
             </div>
