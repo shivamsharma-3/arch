@@ -128,8 +128,6 @@ const Contact: React.FC = () => {
                   required
                   name="crm"
                   defaultValue=""
-                  value={crmSelection}
-                  onChange={(e) => setCrmSelection(e.target.value)}
                   className="w-full px-5 py-4 rounded-2xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/10 outline-none text-white font-medium appearance-none text-sm cursor-pointer transition-all hover:bg-[#151d1d] shadow-inner"
                   style={selectStyle}
                 >
