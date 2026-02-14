@@ -177,10 +177,10 @@ const Contact: React.FC = () => {
                   defaultValue=""
                 >
                   <option value="" disabled>Select range...</option>
-                  <option value="Under $25K">Under $25K</option>
-                  <option value="$25K–$75K">$25K–$75K</option>
-                  <option value="$75K–$200K">$75K–$200K</option>
-                  <option value="$200K+">$200K+</option>
+                  <option value="Under $25K">Under $2K</option>
+                  <option value="$25K–$75K">$2K–$7K</option>
+                  <option value="$75K–$200K">$7K–$20K</option>
+                  <option value="$200K+">$20K+</option>
                 </select>
               </div>
             </div>
@@ -217,7 +217,7 @@ const Contact: React.FC = () => {
                 <div className="h-[1px] w-20 bg-white/5" />
                 <div className="flex items-center gap-2.5">
                   <div className="w-1 h-1 rounded-full bg-teal-500/40" />
-                  <p className="text-[8px] text-neutral-700 font-black uppercase tracking-widest">
+                  <p className="text-[10px] text-neutral-400 font-black uppercase tracking-widest">
                     ARCH ENCRYPTED SUBMISSION
                   </p>
                 </div>
