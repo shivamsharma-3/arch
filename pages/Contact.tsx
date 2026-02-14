@@ -198,7 +198,6 @@ const Contact: React.FC = () => {
             <div className="space-y-2">
               <label className="text-[9px] font-bold uppercase tracking-[0.2em] text-neutral-500 ml-4">Biggest Outbound Bottleneck</label>
               <textarea 
-                required
                 name="bottleneck"
                 className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-teal-500/40 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-sm placeholder-neutral-500 min-h-[110px] resize-none"
                 placeholder="Describe your current outreach friction or primary growth targets..."
