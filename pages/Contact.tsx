@@ -201,7 +201,7 @@ const Contact: React.FC = () => {
 
             {/* Submission Section */}
             <div className="pt-4 space-y-6">
-              <Button className="w-full py-4 text-[10px] uppercase tracking-[0.3em] font-black shadow-lg hover:scale-[1.01] hover:bg-neutral-100 transition-all">
+              <Button className="w-full py-4 text-[8px] uppercase tracking-[0.3em] font-black shadow-lg hover:scale-[1.01] hover:bg-neutral-100 transition-all">
                 Submit for Private Review
               </Button>
               <div className="flex flex-col items-center gap-4">
