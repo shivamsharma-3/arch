@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            className="space-y-4"
+            className="space-y-5"
           >
             <input type="hidden" name="form-name" value="request-audit" />
             <input type="hidden" name="bot-field" />
@@ -172,10 +172,10 @@ const Contact: React.FC = () => {
                   defaultValue=""
                 >
                   <option value="" disabled>Select range...</option>
-                  <option value="Under $25K">Under $25K</option>
-                  <option value="$25K–$75K">$25K–$75K</option>
-                  <option value="$75K–$200K">$75K–$200K</option>
-                  <option value="$200K+">$200K+</option>
+                  <option value="Under $2K">Under $2K</option>
+                  <option value="$2K–$7K">$2K–$7K</option>
+                  <option value="$7K–$20K">$7K–$20K</option>
+                  <option value="$20K+">$20K+</option>
                 </select>
               </div>
             </div>
@@ -191,9 +191,8 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="space-y-1">
-              <label className="text-[8px] font-bold uppercase tracking-widest text-neutral-500 ml-3">Biggest Bottleneck</label>
+              <label className="text-[8px] font-bold uppercase tracking-widest text-neutral-500 ml-3">Biggest Bottleneck (Optional)</label>
               <textarea 
-                required
                 name="bottleneck"
                 className="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400 min-h-[70px] resize-none"
                 placeholder="Describe your current outreach friction..."
@@ -211,7 +210,7 @@ const Contact: React.FC = () => {
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-1 h-1 rounded-full bg-teal-500/30" />
-                  <p className="text-[7px] text-neutral-700 font-black uppercase tracking-widest">
+                  <p className="text-[9px] text-neutral-500 font-black uppercase tracking-widest">
                     ARCH ENCRYPTED SUBMISSION
                   </p>
                 </div>

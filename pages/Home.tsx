@@ -156,7 +156,7 @@ const Home: React.FC = () => {
               <h3 className="text-teal-400 font-bold text-[11px] uppercase tracking-[0.3em] mb-10">IDEAL PARTNERS</h3>
               <ul className="space-y-6">
                 {[
-                  "Average deal size above $3,000",
+                  "Average deal size above $2,000",
                   "B2B Service companies with high-LTV contracts",
                   "Firms with a validated offer seeking to scale outreach",
                   "Leadership who values long-term systems over quick wins"
