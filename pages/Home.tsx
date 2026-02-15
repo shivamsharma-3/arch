@@ -15,13 +15,13 @@ const Home: React.FC = () => {
             <div className="relative w-1.5 h-1.5 bg-teal-500 rounded-full shadow-[0_0_8px_rgba(45,212,191,0.8)]"></div>
           </div>
           <span className="text-teal-400 text-[10px] font-bold tracking-[0.3em] uppercase leading-none antialiased">
-            B2B SERVICE FIRMS • $5K+ ACV
+            B2B SERVICE FIRMS • $3K+ ACV
           </span>
         </div>
 
-        {/* Primary Headline */}
-        <h1 className="relative text-4xl md:text-6xl lg:text-[72px] font-bold tracking-tight mb-8 text-white animate-reveal-up" style={{ animationDelay: '0.05s' }}>
-          Outbound Revenue Systems, Not Revenue Luck.
+        {/* Primary Headline - Reduced size/weight for consulting feel */}
+        <h1 className="relative text-4xl md:text-6xl lg:text-[68px] font-bold tracking-tight mb-8 text-white animate-reveal-up" style={{ animationDelay: '0.05s' }}>
+          Outbound Revenue Systems,<br />Not Revenue Luck.
         </h1>
 
         {/* Bridge Line */}
@@ -31,10 +31,15 @@ const Home: React.FC = () => {
           </p>
         </div>
 
-        {/* Subheadline */}
-        <p className="text-base md:text-xl text-neutral-300 max-w-3xl mb-12 font-medium tracking-tight leading-relaxed animate-reveal-up" style={{ animationDelay: '0.15s' }}>
-          We replace inconsistent prospecting with disciplined pipeline execution. ARCH maps your target market, builds a managed outbound engine, and injects qualified sales conversations into your sales calendar.
-        </p>
+        {/* Subheadline - Infrastructure & Strategy Driven - Constrained to 3 lines on md+ */}
+        <div className="max-w-xl md:max-w-2xl mb-12 animate-reveal-up" style={{ animationDelay: '0.15s' }}>
+          <p className="text-base md:text-xl text-neutral-300 max-w-3xl mb-12 font-medium tracking-tight leading-relaxed animate-reveal-up">
+            We engineer the shift from manual prospecting to structured outbound infrastructure. ARCH installs the systems and operating logic required to produce consistent, qualified sales flow.
+          </p>
+          <p className="text-[10px] md:text-xs text-neutral-400 font-bold uppercase tracking-widest">
+            For B2B service firms tired of inconsistent outbound.
+          </p>
+        </div>
 
         {/* CTA Block */}
         <div className="flex flex-col items-center gap-6 mb-24 animate-reveal-up" style={{ animationDelay: '0.2s' }}>
@@ -42,8 +47,8 @@ const Home: React.FC = () => {
             Request System Audit
           </Button>
           <div className="flex flex-col items-center gap-1">
-            <p className="text-[10px] text-neutral-400 font-bold uppercase tracking-[0.3em]">
-              Partner-led diagnostic review
+            <p className="text-[8px] text-neutral-400 font-bold uppercase tracking-[0.3em]">
+              Direct founder review. No sales team.
             </p>
           </div>
         </div>
@@ -127,7 +132,7 @@ const Home: React.FC = () => {
             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-teal-400 mb-6 block">PHASE-1 RESULT</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Replacing Inconsistent Prospecting with Structured Outbound Execution.</h2>
             <p className="text-neutral-300 text-lg font-medium leading-relaxed">
-              We install a managed outbound engine that operates continuously to produce qualified sales conversations while providing full visibility into your revenue pipeline.
+              ARCH engineers structured outbound infrastructure that replaces manual prospecting with predictable pipeline control, consistent qualified meetings, and measurable revenue visibility.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4">

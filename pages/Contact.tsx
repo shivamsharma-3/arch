@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
           <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-white mb-5 border-b border-white/10 pb-4">Diagnostic Eligibility</h4>
           <ul className="space-y-3">
             {[
-              "B2B service firms doing $25K+ per month",
+              "B2B service firms doing $2K+ per month",
               "Founders relying too heavily on referrals",
               "Teams wanting predictable outbound pipeline"
             ].map((bullet, i) => (
