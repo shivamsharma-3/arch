@@ -56,19 +56,19 @@ const Contact: React.FC = () => {
       </div>
 
       {/* Right Column: Premium Selective Form */}
-      <div className="lg:w-1/2 max-w-xl" id="audit-form-container">
+      <div className="lg:w-1/2 max-w-lg" id="audit-form-container">
         
-        {/* Step 9 — Pre-Frame Section */}
-        <div className="mb-6 px-7 py-5 rounded-2xl bg-[#0a1211] border border-teal-500/10 shadow-lg animate-reveal-up">
-          <h4 className="text-[9px] font-black uppercase tracking-[0.2em] text-teal-400 mb-3">Diagnostic Eligibility</h4>
-          <ul className="space-y-2">
+        {/* Step 9 — Pre-Frame Section (Classic & Premium Update) */}
+        <div className="mb-6 px-8 py-7 rounded-2xl bg-neutral-900/30 border border-white/5 shadow-lg animate-reveal-up">
+          <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-white mb-5 border-b border-white/10 pb-4">Diagnostic Eligibility</h4>
+          <ul className="space-y-3">
             {[
-              "B2B service firms doing $2K+ per month",
+              "B2B service firms doing $25K+ per month",
               "Founders relying too heavily on referrals",
               "Teams wanting predictable outbound pipeline"
             ].map((bullet, i) => (
-              <li key={i} className="flex gap-3 items-center text-[11px] text-neutral-200 font-semibold">
-                <div className="w-1 h-1 rounded-full bg-teal-400" />
+              <li key={i} className="flex gap-3 items-center text-[11px] text-neutral-400 font-medium">
+                <div className="w-1 h-1 rounded-full bg-neutral-600" />
                 {bullet}
               </li>
             ))}
@@ -76,15 +76,15 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Compact Form Container */}
-        <div className="p-7 md:p-9 rounded-[2rem] bg-[#0d0d0f] md:bg-neutral-900/60 border border-white/10 md:backdrop-blur-3xl shadow-2xl relative animate-reveal-up" style={{ animationDelay: '0.1s' }}>
+        <div className="p-6 md:p-8 rounded-[2rem] bg-[#0d0d0f] md:bg-neutral-900/50 border border-white/10 md:backdrop-blur-3xl shadow-2xl relative animate-reveal-up" style={{ animationDelay: '0.1s' }}>
           
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-2.5">
                <div className="w-1.5 h-1.5 rounded-full bg-teal-500 shadow-[0_0_6px_rgba(45,212,191,0.6)]" />
                <span className="text-[8px] font-black uppercase tracking-[0.2em] text-teal-500/80">Selective Onboarding</span>
             </div>
-            <h2 className="text-xl font-bold text-white mb-1.5 tracking-tight">Diagnostic Application</h2>
-            <p className="text-[11px] text-neutral-400 font-medium leading-relaxed">
+            <h2 className="text-xl font-bold text-white mb-1 tracking-tight">Diagnostic Application</h2>
+            <p className="text-[10px] text-neutral-400 font-medium leading-relaxed">
               Limited to a select number of partnerships each quarter.
             </p>
           </div>
@@ -94,64 +94,64 @@ const Contact: React.FC = () => {
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            className="space-y-5"
+            className="space-y-4"
           >
             <input type="hidden" name="form-name" value="request-audit" />
             <input type="hidden" name="bot-field" />
 
             {/* Field Group 1: Identity */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-1.5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="space-y-1">
                 <label className="text-[8px] font-bold uppercase tracking-widest text-neutral-500 ml-3">Full Name</label>
                 <input 
                   required
                   name="name"
-                  className="w-full px-4 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400"
+                  className="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400"
                   placeholder="John Doe"
                 />
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-1">
                 <label className="text-[8px] font-bold uppercase tracking-widest text-neutral-500 ml-3">Work Email</label>
                 <input 
                   required
                   name="email"
                   type="email"
-                  className="w-full px-4 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400"
+                  className="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400"
                   placeholder="john@company.com"
                 />
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-1.5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="space-y-1">
                 <label className="text-[8px] font-bold uppercase tracking-widest text-neutral-500 ml-3">Company Name</label>
                 <input 
                   required
                   name="company"
-                  className="w-full px-4 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400"
+                  className="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400"
                   placeholder="Acme Corp"
                 />
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-1">
                 <label className="text-[8px] font-bold uppercase tracking-widest text-neutral-500 ml-3">Website URL</label>
                 <input 
                   required
                   name="website"
                   type="url"
-                  className="w-full px-4 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400"
+                  className="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400"
                   placeholder="https://company.com"
                 />
               </div>
             </div>
 
             {/* Field Group 2: Qualification */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-1.5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="space-y-1">
                 <label className="text-[8px] font-bold uppercase tracking-widest text-neutral-500 ml-3">Team Size</label>
                 <select 
                   required
                   name="company_size" 
-                  className="w-full px-4 py-3.5 rounded-xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/5 outline-none text-white font-medium appearance-none text-xs cursor-pointer transition-all hover:bg-[#151d1d]"
+                  className="w-full px-4 py-3 rounded-xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/5 outline-none text-white font-medium appearance-none text-xs cursor-pointer transition-all hover:bg-[#151d1d]"
                   style={selectStyle}
                   defaultValue=""
                 >
@@ -162,46 +162,47 @@ const Contact: React.FC = () => {
                   <option value="200+">200+</option>
                 </select>
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-1">
                 <label className="text-[8px] font-bold uppercase tracking-widest text-neutral-500 ml-3">Monthly Revenue</label>
                 <select 
                   required
                   name="revenue_range" 
-                  className="w-full px-4 py-3.5 rounded-xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/5 outline-none text-white font-medium appearance-none text-xs cursor-pointer transition-all hover:bg-[#151d1d]"
+                  className="w-full px-4 py-3 rounded-xl bg-[#0f1414] border border-teal-500/20 focus:border-teal-400 focus:ring-2 focus:ring-teal-500/5 outline-none text-white font-medium appearance-none text-xs cursor-pointer transition-all hover:bg-[#151d1d]"
                   style={selectStyle}
                   defaultValue=""
                 >
                   <option value="" disabled>Select range...</option>
-                  <option value="Under $2K">Under $2K</option>
-                  <option value="$2K–$7K">$2K–$7K</option>
-                  <option value="$7K–$20K">$7K–$20K</option>
-                  <option value="$20K+">$20K+</option>
+                  <option value="Under $25K">Under $25K</option>
+                  <option value="$25K–$75K">$25K–$75K</option>
+                  <option value="$75K–$200K">$75K–$200K</option>
+                  <option value="$200K+">$200K+</option>
                 </select>
               </div>
             </div>
 
-            <div className="space-y-1.5">
+            <div className="space-y-1">
               <label className="text-[8px] font-bold uppercase tracking-widest text-neutral-500 ml-3">Current Outbound / CRM Stack</label>
               <input 
                 required
                 name="outbound_stack"
-                className="w-full px-4 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400"
+                className="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400"
                 placeholder="e.g., HubSpot, Apollo, manual outreach..."
               />
             </div>
 
-            <div className="space-y-1.5">
+            <div className="space-y-1">
               <label className="text-[8px] font-bold uppercase tracking-widest text-neutral-500 ml-3">Biggest Bottleneck</label>
               <textarea 
+                required
                 name="bottleneck"
-                className="w-full px-4 py-3.5 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400 min-h-[80px] resize-none"
+                className="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/5 transition-all outline-none text-white font-medium text-xs placeholder-neutral-400 min-h-[70px] resize-none"
                 placeholder="Describe your current outreach friction..."
               />
             </div>
 
-            {/* Submission Section */}
-            <div className="pt-4 space-y-6">
-              <Button className="w-full py-4 text-[8px] uppercase tracking-[0.3em] font-black shadow-lg hover:scale-[1.01] hover:bg-neutral-100 transition-all">
+            {/* Submission Section (Single Line Button) */}
+            <div className="pt-4 space-y-6 flex flex-col items-center">
+              <Button className="w-full min-w-max px-8 py-3.5 text-[9px] uppercase font-black shadow-lg hover:scale-[1.01] hover:bg-neutral-100 transition-all whitespace-nowrap">
                 Submit for Private Review
               </Button>
               <div className="flex flex-col items-center gap-4">
@@ -210,7 +211,7 @@ const Contact: React.FC = () => {
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-1 h-1 rounded-full bg-teal-500/30" />
-                  <p className="text-[9px] text-neutral-400 font-black uppercase tracking-widest">
+                  <p className="text-[7px] text-neutral-700 font-black uppercase tracking-widest">
                     ARCH ENCRYPTED SUBMISSION
                   </p>
                 </div>
