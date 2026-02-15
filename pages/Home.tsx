@@ -15,7 +15,7 @@ const Home: React.FC = () => {
             <div className="relative w-1.5 h-1.5 bg-teal-500 rounded-full shadow-[0_0_8px_rgba(45,212,191,0.8)]"></div>
           </div>
           <span className="text-teal-400 text-[10px] font-bold tracking-[0.3em] uppercase leading-none antialiased">
-            B2B SERVICE FIRMS • $3K+ ACV
+            B2B SERVICE FIRMS • $5K+ ACV
           </span>
         </div>
 
